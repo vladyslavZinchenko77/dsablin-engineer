@@ -1,0 +1,52 @@
+.hero{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    background: #F2F1EF;
+    position: relative;
+    .hero__avatar-img--panorama{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+    }
+}
+
+
+.hero__introduce{
+    width: 50%;
+    background-color: #3399FF;
+    .hero__introduce-title{
+        padding-top: 150px;
+        color: #fff;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 114% ; 
+        text-align: center;
+
+    }
+    .hero__introduce-subtitle{
+        color: #fff;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 114% ; 
+        text-align: center;
+    }
+   
+}
+
+.hero__avatar{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding-top: 48px;
+    .hero__avatar-img{  
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+}
