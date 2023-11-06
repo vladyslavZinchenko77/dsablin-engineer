@@ -1,0 +1,31 @@
+.burger-icon{
+    width: 30px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    .burger-icon__firtst{
+        height: 3px;
+        background-color: #333;
+        border-radius: 10px;
+    }
+    .burger-icon__second{
+        height: 3px;
+        background-color: #333;
+        border-radius: 10px;
+    }
+    .burger-icon__third{
+        height: 3px;
+        background-color: #333;
+        width: 15px;
+        border-radius: 10px;
+        transition: 0.4s;
+    }
+    &:hover{
+        .burger-icon__third{
+            width: 100%;
+            transition: 0.4s;
+        }
+    }
+}
