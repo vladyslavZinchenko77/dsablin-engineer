@@ -1,0 +1,23 @@
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0 24px;
+    background-color: rgb(185, 144, 222);
+}
+
+
+.header__nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header__nav-item{
+        list-style: none;
+        .header__nav-item-link{
+            text-decoration: none;
+            margin-left: 24px;
+        }
+    }
+}
