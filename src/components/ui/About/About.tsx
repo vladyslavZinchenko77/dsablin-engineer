@@ -29,7 +29,7 @@ const About = () => {
             железобетонных и кирпичных зданиях , усиление фундаментов мелкого
             заложения и ленточных
           </p>
-          <ButtonMain />
+          <ButtonMain style={{ marginTop: '24px' }}>Download CV</ButtonMain>
         </div>
         <div className="about__photo-block">
           <img className="about__photo" src={avatar} alt="photo" />
