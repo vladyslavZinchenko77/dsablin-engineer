@@ -1,3 +1,5 @@
+@import "../../../styles/viriables.scss";
+
 .hero{
     display: flex;
     justify-content: space-between;
@@ -22,7 +24,7 @@
 
 .hero__introduce{
     width: 50%;
-    background-color: #3399FF;
+    background-color: $main-blue;
     .hero__introduce-title{
         padding-top: 150px;
         color: #fff;
