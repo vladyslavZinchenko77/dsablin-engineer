@@ -1,3 +1,4 @@
+@import "../../../styles//viriables.scss";
 
 .header{
     display: flex;
@@ -9,6 +10,7 @@
     right: 0;
     z-index: 5;
     padding: 24px;
+    background-color: $main-blue;
 }
 
 .header__nav{
@@ -21,7 +23,7 @@
             text-decoration: none;
             margin-left: 24px;
             position: relative;
-            color: #333;
+            color: #fff;
             
         }
         .header__nav-item-link::after {
@@ -31,7 +33,7 @@
             right: 0;  
             bottom: -4px;
             height: 2px;
-            background-color: #3399FF;
+            background-color: #fff;
             transform: scaleX(0);
             transition: transform 0.3s ease;
             

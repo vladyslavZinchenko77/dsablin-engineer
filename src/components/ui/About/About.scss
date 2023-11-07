@@ -1,0 +1,48 @@
+@import "../../../styles/viriables.scss";
+
+.about{
+    padding: 56px 24px 0 56px;
+    position: relative;
+    .about__img-wave{
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        z-index: -1;
+
+    }
+}
+
+.about__title{
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    color: $main-blue;
+    line-height: 114.286%;
+    z-index: 2;
+
+}
+
+
+.about__content{
+    display: flex;
+    
+    .about__text-block{
+        width: 50%;
+        .about__text-block--text{
+            padding-top: 24px;
+        }
+    }
+    .about__photo-block{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        .about__photo{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            z-index: 2;
+        }
+    }
+    
+}
+
