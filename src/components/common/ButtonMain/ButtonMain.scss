@@ -1,3 +1,47 @@
-// .button-main{
+@import "../../../styles/viriables.scss";
 
-// }
+
+
+.button-main {
+    padding: 10px 20px;
+    background: none; 
+    border: 2px solid $main-blue;
+    color: $main-blue;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1); 
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .button-main:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: $main-blue;
+    z-index: -1;
+    transition: width 0.3s ease;
+  }
+  
+  .button-main:hover {
+    color: #fff;
+  }
+  
+  .button-main:hover:after {
+    width: 100%;
+  }
+  
+  .button-main:active {
+    transform: scale(0.95);
+  }
