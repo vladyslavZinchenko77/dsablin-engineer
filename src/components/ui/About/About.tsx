@@ -1,5 +1,4 @@
 import avatar from '../../../assets/img/avatar.jpg';
-import ButtonMain from '../../common/ButtonMain/ButtonMain';
 import wave from '../../../assets/img/wave.svg';
 import './About.scss';
 
@@ -29,7 +28,6 @@ const About = () => {
             железобетонных и кирпичных зданиях , усиление фундаментов мелкого
             заложения и ленточных
           </p>
-          <ButtonMain style={{ marginTop: '24px' }}>Download CV</ButtonMain>
         </div>
         <div className="about__photo-block">
           <img className="about__photo" src={avatar} alt="photo" />

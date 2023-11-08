@@ -1,0 +1,37 @@
+@import "../../../styles/viriables.scss";
+.experience{
+    margin-top: 48px;
+    padding: 0 24px;
+    .experience__title{
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        color: $main-blue;
+        line-height: 114%;
+        text-align: right;
+        padding: 0 24px;
+    }
+}
+
+
+
+.experience__works{
+    padding: 24px;
+    .experience__works-item{
+        padding: 24px;
+        .experience__works-item-period{
+            padding-top: 8px;
+        }
+        .experience__works-position{
+            padding-top: 8px;
+            color: $main-blue;
+        }
+        .experience__works-company{
+            padding-top: 8px;
+        }
+        .experience__works-description{
+        padding-top: 8px;
+    }
+    }
+}
+
