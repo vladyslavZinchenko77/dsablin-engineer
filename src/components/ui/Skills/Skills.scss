@@ -14,3 +14,30 @@
     text-align: right;
     z-index: 2;
 }
+
+.skills__list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+    .skills__list-item{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 24px;
+        transition: 0.4s;
+            &:hover{
+                margin-top: 0;
+                transition: 0.4s;
+            }
+      
+        .skills__list-item--img{ 
+            width: 60px;
+            height: 60px;
+            
+        }
+        .skills__list-item--title{
+            padding-top: 8px;
+        }
+    }
+}

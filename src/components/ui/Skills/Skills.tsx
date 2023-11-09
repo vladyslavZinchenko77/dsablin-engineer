@@ -1,17 +1,37 @@
+import autocad from '../../../assets/expierence-icons/autocad.jpg';
+import max from '../../../assets/expierence-icons/max.jpg';
+import office from '../../../assets/expierence-icons/office.jpg';
+import photoshop from '../../../assets/expierence-icons/photoshop.jpg';
+import avk from '../../../assets/expierence-icons/avk.jpg';
+import lira from '../../../assets/expierence-icons/lira.jpg';
 import './Skills.scss';
+
+const skillsData = [
+  { src: autocad, title: 'AutoCAD' },
+  { src: max, title: 'Autodesk 3ds Max' },
+  { src: office, title: 'MS Office' },
+  { src: photoshop, title: 'Adobe Photoshop' },
+  { src: avk, title: 'АВК' },
+  { src: lira, title: 'ПК Лира' },
+  { src: lira, title: 'Мономах' },
+  { src: lira, title: 'SCAD' },
+];
+
 const Skills = () => {
   return (
     <section className="skills">
       <h2 className="skills__title">Skills</h2>
-      <ul>
-        <li>AutoCAD</li>
-        <li>Autodesk 3ds Max</li>
-        <li>MS Office</li>
-        <li>Adobe Photoshop</li>
-        <li>АВК</li>
-        <li>ПК Лира</li>
-        <li>Мономах</li>
-        <li>SCAD</li>
+      <ul className="skills__list">
+        {skillsData.map((item, index) => (
+          <li key={index} className="skills__list-item">
+            <img
+              className="skills__list-item--img"
+              src={item.src}
+              alt={item.title}
+            />
+            <p className="skills__list-item--title">{item.title}</p>
+          </li>
+        ))}
       </ul>
     </section>
   );
