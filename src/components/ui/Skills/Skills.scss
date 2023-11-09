@@ -1,6 +1,16 @@
-// font-size: 56px;
-//     font-style: normal;
-//     font-weight: 700;
-//     color: $main-blue;
-//     line-height: 114.286%;
-//     z-index: 2;
+@import "../../../styles/viriables.scss";
+
+
+.skills{
+    padding: 24px;
+}
+
+.skills__title{
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    color: $main-blue;
+    line-height: 114.286%;
+    text-align: right;
+    z-index: 2;
+}
