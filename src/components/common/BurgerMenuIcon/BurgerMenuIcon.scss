@@ -12,11 +12,13 @@
         height: 3px;
         background-color: #fff;
         border-radius: 10px;
+        transition: 0.4s;
     }
     .burger-icon__second{
         height: 3px;
         background-color: #fff;
         border-radius: 10px;
+        transition: 0.4s;
     }
     .burger-icon__third{
         height: 3px;
@@ -32,3 +34,38 @@
         }
     }
 }
+
+
+
+
+
+.burger-icon-open{
+  width: 30px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: $main-blue;
+  cursor: pointer;
+  .burger-icon__firtst{
+      height: 3px;
+      background-color: #fff;
+      border-radius: 10px;
+      transform: rotate(-45deg) translate(-5px, 6px);
+      transition: 0.4s;
+  }
+  .burger-icon__second{
+      height: 3px;
+      background-color: #fff;
+      border-radius: 10px;
+      transform: rotate(45deg) translate(-9px, -11px);
+      transition: 0.4s;
+  }
+  .burger-icon__third{
+     display: none;
+     transition: 0.4s;
+  }
+ 
+}
+
+

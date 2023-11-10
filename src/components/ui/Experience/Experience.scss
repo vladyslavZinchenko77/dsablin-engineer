@@ -11,6 +11,15 @@
         text-align: right;
         padding: 0 24px;
     }
+    .experience__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & img{
+            max-width: 800px;
+            height: auto;
+        }
+    }
 }
 
 

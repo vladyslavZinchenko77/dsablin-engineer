@@ -1,10 +1,12 @@
+import './Contacts.scss';
+
 const Contacts = () => {
   return (
-    <div>
-      <h2>
+    <section className="contacts">
+      <h2 className="contacts__title">
         More information? <br /> Contact me.
       </h2>
-    </div>
+    </section>
   );
 };
 

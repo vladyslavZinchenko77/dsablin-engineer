@@ -9,24 +9,36 @@ const About = () => {
       <div className="about__content">
         <div className="about__text-block">
           <p className="about__text-block--text">
-            За период моей практической деятельности лично мною были проработаны
-            , рассчитаны и запроектированы следующие конструкции и сооружения :
-            Основания : Фундаменты мелкого заложения , глубокого , свайные
-            ростверки под отдельные опоры и свайные ростверки в ввиде свайного
-            поля под все сооружение , подпорные стены ( уголковые , массивные )
-            , шпунтовое ограждение , плитные ф-ты на естественном основании и на
-            грунтовой подушке , ленточные фундаменты , фундаменты под
-            оборудование . Железобетонные конструкции : Монолитные жилые здания
-            , фундаменты почти всех типов , покрытия , перекрытия , подпорные
-            стены , рабочие башни . Металлические конструкции : Этажерки, склады
-            , ангары , навесы , галлереи , площадки под оборудование , рабочие
-            башни , бункера , административные здания , здания СТО , автосалоны
-            . ЛСТК : ангары , склады , 4-х этажное административное здание ,
-            пристройка над кирпичным зданием . Усиление металлических и
-            железобетонных конструкций : железобетонные балки и плиты покрытия ,
-            металлические балки, колонны , фермы , устройство проемов в
-            железобетонных и кирпичных зданиях , усиление фундаментов мелкого
-            заложения и ленточных
+            During my practical experience, I personally worked on, calculated,
+            and designed the following structures and buildings:
+          </p>
+          <p className="about__text-block--text">
+            Foundations: Shallow foundations, deep foundations, pile caps under
+            individual supports, pile caps in the form of a pile field under the
+            entire structure, retaining walls (corner, massive), sheet pile
+            fencing, slab structures on natural foundation and on a soil
+            cushion, strip foundations, foundations for equipment.
+          </p>
+          <p className="about__text-block--text">
+            Reinforced concrete structures: Monolithic residential buildings,
+            foundations of almost all types, coverings, floor slabs, retaining
+            walls, working towers.
+          </p>
+          <p className="about__text-block--text">
+            Metal structures: Racks, warehouses, hangars, canopies, galleries,
+            platforms for equipment, working towers, bunkers, administrative
+            buildings, service station buildings, car showrooms.
+          </p>
+          <p className="about__text-block--text">
+            Light-gauge steel structures: Hangars, warehouses, a 4-story
+            administrative building, an extension above a brick building.
+          </p>
+          <p className="about__text-block--text">
+            Reinforcement of metal and reinforced concrete structures:
+            Reinforced concrete beams and slab covers, steel beams, columns,
+            trusses, opening formation in reinforced concrete and brick
+            buildings, reinforcement of shallow foundations and strip
+            foundations.
           </p>
         </div>
         <div className="about__photo-block">

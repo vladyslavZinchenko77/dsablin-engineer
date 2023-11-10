@@ -1,5 +1,5 @@
 import ButtonMain from '../../common/ButtonMain/ButtonMain';
-
+import teamwork from '../../../assets/img/workers.png';
 import './Experience.scss';
 
 const experienceData = [
@@ -33,16 +33,23 @@ const Experience = () => {
   return (
     <section className="experience">
       <h2 className="experience__title">Work experience</h2>
-      <ul className="experience__works">
-        {experienceData.map((item, index) => (
-          <li key={index} className="experience__works-item">
-            <p className="experience__works-item-period">{item.period}</p>
-            <h2 className="experience__works-position">{item.position}</h2>
-            <h3 className="experience__works-company">{item.company}</h3>
-            <p className="experience__works-description">{item.description}</p>
-          </li>
-        ))}
-      </ul>
+      <div className="experience__content">
+        <ul className="experience__works">
+          {experienceData.map((item, index) => (
+            <li key={index} className="experience__works-item">
+              <p className="experience__works-item-period">{item.period}</p>
+              <h2 className="experience__works-position">{item.position}</h2>
+              <h3 className="experience__works-company">{item.company}</h3>
+              <p className="experience__works-description">
+                {item.description}
+              </p>
+            </li>
+          ))}
+        </ul>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <img src={teamwork} alt="teamwork" />
+        </div>
+      </div>
       <div
         style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}
       >

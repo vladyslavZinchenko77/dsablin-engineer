@@ -1,17 +1,23 @@
+import './Footer.scss';
+
 const Footer = () => {
   return (
-    <div>
-      <div>Connect with me MICHAEL TONG.</div>
-      <div>
+    <footer className="footer">
+      <div className="footer__connect">
+        <p>Connect with me </p>
+        <p>Dmytro Sublin.</p>
+      </div>
+      <div className="footer__contacts">
         <a href="tel:+380661009920">+38 066 100 9920 (telegram/viber)</a>
         <a href="mailto:dmutrosablin@gmail.com">dmutrosablin@gmail.com</a>
-        <a href="facebook"></a>
+        <a href="facebook.com"></a>
       </div>
-      <div>
-        © 2023 Sublin Dmytro engineer Design in Figma Build in React, Tailwind
-        CSS and Framer Motion
+      <div className="footer__copyright">
+        <p>© 2023 Sublin Dmytro engineer</p>
+        <p>Design in Figma Build in React, Tailwind</p>
+        <p>CSS and Framer Motion</p>
       </div>
-    </div>
+    </footer>
   );
 };
 
