@@ -3,16 +3,17 @@ import { useState } from 'react';
 import './Header.scss';
 
 const Header = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <div className="header__wrap">
-      <header className="header">
-        <BurgerMenuIcon
-          open={open}
-          onClick={() => {
-            setOpen(!open);
-          }}
-        />
+      <BurgerMenuIcon
+        open={open}
+        onClick={() => {
+          setOpen(!open);
+        }}
+      />
+
+      <header className={open ? 'header' : 'header--close'}>
         <nav>
           <ul className="header__nav">
             <li className="header__nav-item">

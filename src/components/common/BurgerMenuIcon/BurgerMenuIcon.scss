@@ -7,7 +7,13 @@
     justify-content: space-between;
     flex-direction: column;
     background-color: $main-blue;
+    padding: 8px;
+    border-radius: 6px;
     cursor: pointer;
+    z-index: 7;
+    position: fixed;
+    top: 24px;
+    left: 24px;
     .burger-icon__firtst{
         height: 3px;
         background-color: #fff;
@@ -42,11 +48,21 @@
 .burger-icon-open{
   width: 30px;
   height: 24px;
+  padding: 8px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background-color: $main-blue;
   cursor: pointer;
+  z-index: 7;
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  transform: scale(1);
+  transition: 0.2s;
+  &:hover{
+    transform: scale(1.2);
+    transition: 0.2s;
+  }
   .burger-icon__firtst{
       height: 3px;
       background-color: #fff;
