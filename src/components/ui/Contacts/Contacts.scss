@@ -4,10 +4,16 @@
     margin: 48px 0 0 0;
     padding: 154px 154px;
     background-color: $main-blue;
+    position: relative;
     .contacts__title{
         text-align: center;
         font-weight: normal;
         font-size: 48px;
         color: #fff;
+    }
+    & img{
+        position: absolute;
+        top: 55%;
+        left: 15%;
     }
 }

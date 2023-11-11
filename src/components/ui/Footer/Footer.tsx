@@ -13,9 +13,14 @@ const Footer = () => {
         <a href="facebook.com"></a>
       </div>
       <div className="footer__copyright">
-        <p>© 2023 Sublin Dmytro engineer</p>
-        <p>Design in Figma Build in React, Tailwind</p>
-        <p>CSS and Framer Motion</p>
+        <p>© 2023 Dmytro Sublin engineer</p>
+        <p>Design and develop in React, Vite, Scss and GSAP</p>
+        <p>
+          by{' '}
+          <a href="https://www.linkedin.com/in/vladyslav-zinchenko-67414a205/">
+            Vlad Zinchenko
+          </a>
+        </p>
       </div>
     </footer>
   );
