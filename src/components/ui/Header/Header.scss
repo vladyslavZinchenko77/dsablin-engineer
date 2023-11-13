@@ -1,6 +1,7 @@
-@import "../../../styles//viriables.scss";
+@import "../../../styles/viriables.scss";
 
-.header{
+.header,
+.header--close {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -15,52 +16,45 @@
     transition: 0.2s;
 }
 
-
-  .header--close{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: fixed;
+.header--close {
     top: -100%;
-    left: 0;
-    right: 0;
-    z-index: 5;
-    padding: 24px;
-    background-color: $main-blue;
-    transform: translateY(0);
-    opacity: 1;
-    transition: 0.2s;
-  }
+    transition: 2s;
+}
 
-
-.header__nav{
+.header__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .header__nav-item{
+
+    .header__nav-item {
         list-style: none;
-        .header__nav-item-link{
+
+        .header__nav-item-link {
             text-decoration: none;
             margin-left: 24px;
             position: relative;
             color: #fff;
-            
+            background: none;
+            border: none;
+            box-shadow: none;
+            font-size: 16px;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -4px;
+                height: 2px;
+                background-color: #fff;
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+            }
         }
-        .header__nav-item-link::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;  
-            bottom: -4px;
-            height: 2px;
-            background-color: #fff;
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-            
-          }
-          
-          .header__nav-item-link:hover::after {
-            transform: scaleX(1);
-          }
     }
 }

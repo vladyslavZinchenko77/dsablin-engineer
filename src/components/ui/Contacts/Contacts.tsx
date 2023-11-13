@@ -4,7 +4,7 @@ import './Contacts.scss';
 
 const Contacts = () => {
   return (
-    <section className="contacts">
+    <section className="contacts" id="contact">
       <h2 className="contacts__title">
         More information? <br /> Contact me.
       </h2>

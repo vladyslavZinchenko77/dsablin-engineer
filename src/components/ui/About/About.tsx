@@ -4,7 +4,7 @@ import './About.scss';
 
 const About = () => {
   return (
-    <div className="about">
+    <section className="about" id="about">
       <h2 className="about__title">About me</h2>
       <div className="about__content">
         <div className="about__text-block">
@@ -46,7 +46,7 @@ const About = () => {
         </div>
       </div>
       <img className="about__img-wave" src={wave} alt="wave" />
-    </div>
+    </section>
   );
 };
 

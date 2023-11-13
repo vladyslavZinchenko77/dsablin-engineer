@@ -13,7 +13,7 @@ import './Portfolio.scss';
 
 const Portfolio = () => {
   return (
-    <section className="portfolio">
+    <section className="portfolio" id="portfolio">
       <h2 className="portfolio__title">Portfolio</h2>
       <Swiper
         cssMode={true}
