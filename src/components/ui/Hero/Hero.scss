@@ -6,6 +6,11 @@
     height: 100vh;
     background: #F2F1EF;
     position: relative;
+    .lang{
+        position: fixed;
+        top: 50%;
+        right: 10px;
+    }
     .hero__avatar-img--panorama{
         width: 100%;
         position: absolute;
