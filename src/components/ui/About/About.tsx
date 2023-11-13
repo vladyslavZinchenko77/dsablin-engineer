@@ -1,11 +1,12 @@
 import avatar from '../../../assets/img/avatar.jpg';
 import wave from '../../../assets/img/wave.svg';
+import TitleSection from '../../common/TitleSection/TitleSection';
 import './About.scss';
 
 const About = () => {
   return (
     <section className="about" id="about">
-      <h2 className="about__title">About me</h2>
+      <TitleSection textAlign="left">About me</TitleSection>
       <div className="about__content">
         <div className="about__text-block">
           <p className="about__text-block--text">

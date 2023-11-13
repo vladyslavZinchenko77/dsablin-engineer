@@ -4,6 +4,7 @@ import office from '../../../assets/expierence-icons/office.jpg';
 import photoshop from '../../../assets/expierence-icons/photoshop.jpg';
 import avk from '../../../assets/expierence-icons/avk.jpg';
 import lira from '../../../assets/expierence-icons/lira.jpg';
+import TitleSection from '../../common/TitleSection/TitleSection';
 import './Skills.scss';
 
 const skillsData = [
@@ -20,7 +21,7 @@ const skillsData = [
 const Skills = () => {
   return (
     <section className="skills" id="skills">
-      <h2 className="skills__title">Skills</h2>
+      <TitleSection textAlign="left">Skills</TitleSection>
       <ul className="skills__list">
         {skillsData.map((item, index) => (
           <li key={index} className="skills__list-item">

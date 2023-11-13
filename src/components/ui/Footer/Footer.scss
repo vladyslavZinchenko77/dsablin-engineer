@@ -1,15 +1,27 @@
+@import "../../../styles//viriables.scss";
+
 .footer{
     display: flex;
     justify-content: space-between;
     padding: 24px;
-    background-color: #F2F1EF;
+    background-color: $light-background;
     .footer__connect{
         display: flex;
+        align-items: center;
+       .footer__connect-text{
+        display: flex;
         flex-direction: column;
+        margin-left: 8px;
+       }
     }
     .footer__contacts{
         display: flex;
         flex-direction: column;
+        & a{
+           
+            color: #333;
+        }
+        
     }
     .footer__copyright{
         display: flex;

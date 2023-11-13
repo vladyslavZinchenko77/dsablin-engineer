@@ -2,19 +2,11 @@
 .experience{
     margin-top: 48px;
     padding: 0 24px;
-    .experience__title{
-        font-size: 56px;
-        font-style: normal;
-        font-weight: 700;
-        color: $main-blue;
-        line-height: 114%;
-        text-align: right;
-        padding: 0 24px;
-    }
     .experience__content{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 24px;
         & img{
             max-width: 800px;
             height: auto;
