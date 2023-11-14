@@ -1,17 +1,35 @@
+import arrow from '../../../assets/img/arrow.svg';
+import './Footer.scss';
+
 const Footer = () => {
   return (
-    <div>
-      <div>Connect with me MICHAEL TONG.</div>
-      <div>
+    <footer className="footer">
+      <div className="footer__connect">
+        <img src={arrow} alt="arrow" />
+        <div className="footer__connect-text">
+          <p>Connect with me </p>
+          <p style={{ fontSize: '26px' }}>Dmytro Sublin.</p>
+        </div>
+      </div>
+      <div className="footer__contacts">
         <a href="tel:+380661009920">+38 066 100 9920 (telegram/viber)</a>
         <a href="mailto:dmutrosablin@gmail.com">dmutrosablin@gmail.com</a>
-        <a href="facebook"></a>
+        <a href="facebook.com"></a>
       </div>
-      <div>
-        © 2023 Sublin Dmytro engineer Design in Figma Build in React, Tailwind
-        CSS and Framer Motion
+      <div className="footer__copyright">
+        <p>© 2023 Dmytro Sublin engineer</p>
+        <p>Design and develop in React, Vite, Scss and GSAP</p>
+        <p>
+          by{' '}
+          <a
+            href="https://www.linkedin.com/in/vladyslav-zinchenko-67414a205/"
+            target="_blank"
+          >
+            Vlad Zinchenko
+          </a>
+        </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

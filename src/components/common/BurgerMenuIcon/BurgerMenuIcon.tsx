@@ -1,8 +1,17 @@
+import { FC } from 'react';
 import './BurgerMenuIcon.scss';
 
-const BurgerMenuIcon = () => {
+interface BurgerMenuIcon {
+  open: boolean;
+  onClick: () => void;
+}
+
+const BurgerMenuIcon: FC<BurgerMenuIcon> = ({ open, onClick }) => {
   return (
-    <div className="burger-icon">
+    <div
+      onClick={onClick}
+      className={open ? 'burger-icon-open' : 'burger-icon'}
+    >
       <div className="burger-icon__firtst"></div>
       <div className="burger-icon__second"></div>
       <div className="burger-icon__third"></div>

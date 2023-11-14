@@ -1,10 +1,15 @@
+import plain from '../../../assets/img/plane.svg';
+
+import './Contacts.scss';
+
 const Contacts = () => {
   return (
-    <div>
-      <h2>
+    <section className="contacts" id="contact">
+      <h2 className="contacts__title">
         More information? <br /> Contact me.
       </h2>
-    </div>
+      <img src={plain} alt="plain" />
+    </section>
   );
 };
 
