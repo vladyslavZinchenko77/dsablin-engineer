@@ -1,3 +1,5 @@
+import gsap from 'gsap';
+import { useEffect, useRef } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -20,9 +22,40 @@ import img11 from '../../../assets/portfolio/11.jpg';
 import './Portfolio.scss';
 
 const Portfolio = () => {
+  const portfolioRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const portfolioElement = portfolioRef.current;
+
+      if (portfolioElement) {
+        const rect = portfolioElement.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+        if (isVisible) {
+          gsap.to('#portfolio-title', { x: 0, opacity: 1, duration: 1 });
+          gsap.to('.mySwiper', { opacity: 1, duration: 1, delay: 1 });
+        } else {
+          gsap.to('#portfolio-title', { x: '100%', opacity: 0, duration: 1 });
+          gsap.to('.mySwiper', { opacity: 0, duration: 1, delay: 1 });
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <section className="portfolio" id="portfolio">
-      <TitleSection textAlign="right">Portfolio</TitleSection>
+    <section ref={portfolioRef} className="portfolio" id="portfolio">
+      <TitleSection textAlign="right" id="portfolio-title">
+        Portfolio
+      </TitleSection>
       <Swiper
         cssMode={true}
         navigation={true}

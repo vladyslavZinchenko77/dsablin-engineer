@@ -1,3 +1,5 @@
+import gsap from 'gsap';
+import { useEffect, useRef } from 'react';
 import autocad from '../../../assets/expierence-icons/autocad.jpg';
 import max from '../../../assets/expierence-icons/max.jpg';
 import office from '../../../assets/expierence-icons/office.jpg';
@@ -19,9 +21,40 @@ const skillsData = [
 ];
 
 const Skills = () => {
+  const skillsRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const skillsElement = skillsRef.current;
+
+      if (skillsElement) {
+        const rect = skillsElement.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+        if (isVisible) {
+          gsap.to('#skills-title', { x: 0, opacity: 1, duration: 1 });
+          gsap.to('.skills__list', { opacity: 1, duration: 1, delay: 1 });
+        } else {
+          gsap.to('#skills-title', { x: '-100%', opacity: 0, duration: 1 });
+          gsap.to('.skills__list', { opacity: 0, duration: 1, delay: 1 });
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <section className="skills" id="skills">
-      <TitleSection textAlign="left">Skills</TitleSection>
+    <section ref={skillsRef} className="skills" id="skills">
+      <TitleSection textAlign="left" id="skills-title">
+        Skills
+      </TitleSection>
       <ul className="skills__list">
         {skillsData.map((item, index) => (
           <li key={index} className="skills__list-item">
