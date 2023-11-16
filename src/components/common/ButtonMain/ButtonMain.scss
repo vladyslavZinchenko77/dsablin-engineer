@@ -5,8 +5,8 @@
 .button-main {
     padding: 10px 20px;
     background: none; 
-    border: 2px solid $main-blue;
-    color: $main-blue;
+    border: 2px solid $main-color;
+    color: $main-color;
     text-transform: uppercase;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -29,13 +29,13 @@
     top: 0;
     height: 100%;
     width: 0;
-    background-color: $main-blue;
+    background-color: $main-color;
     z-index: -1;
     transition: width 0.3s ease;
   }
   
   .button-main:hover {
-    color: #fff;
+    color: $black-color;
   }
   
   .button-main:hover:after {

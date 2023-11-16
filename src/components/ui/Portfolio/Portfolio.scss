@@ -6,14 +6,29 @@
 
 }
 
-
-
-
 .mySwiper{
     max-width: 80%;
     height: 400px;
     margin-top: 48px;
     & img{
         max-height: 400px;
+    }
+}
+.portfolio__works{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 8px;
+    margin-top: 48px;
+    .portfolio__works-item{
+        .portfolio__works-item--img{
+            width: 350px;
+            height: 200px;
+            border-radius: 10px;
+            border: 1px solid grey;
+            cursor: pointer;
+        }
+        .portfolio__works-item--desc{
+            text-align: left;
+        }
     }
 }

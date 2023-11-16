@@ -3,9 +3,9 @@
 .contacts{
     margin: 48px 0 0 0;
     padding: 154px 154px;
-    background-color: $main-blue;
+    background-color: $main-color;
     position: relative;
-    z-index: 8;
+    z-index: 5;
     .contacts__title{
         text-align: center;
         font-weight: normal;
@@ -18,3 +18,5 @@
         left: 15%;
     }
 }
+
+

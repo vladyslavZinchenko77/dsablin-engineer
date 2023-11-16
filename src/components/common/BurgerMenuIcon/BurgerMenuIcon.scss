@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-color: $main-blue;
+    background-color: $main-color;
     padding: 8px;
     border-radius: 6px;
     cursor: pointer;
@@ -16,19 +16,19 @@
     left: 24px;
     .burger-icon__firtst{
         height: 3px;
-        background-color: #fff;
+        background-color: $black-color;
         border-radius: 10px;
         transition: 0.4s;
     }
     .burger-icon__second{
         height: 3px;
-        background-color: #fff;
+        background-color: $black-color;
         border-radius: 10px;
         transition: 0.4s;
     }
     .burger-icon__third{
         height: 3px;
-        background-color: #fff;
+        background-color: $black-color;
         width: 15px;
         border-radius: 10px;
         transition: 0.4s;
@@ -65,14 +65,14 @@
   }
   .burger-icon__firtst{
       height: 3px;
-      background-color: #fff;
+      background-color: $black-color;
       border-radius: 10px;
       transform: rotate(-45deg) translate(-5px, 6px);
       transition: 0.4s;
   }
   .burger-icon__second{
       height: 3px;
-      background-color: #fff;
+      background-color: $black-color;
       border-radius: 10px;
       transform: rotate(45deg) translate(-9px, -11px);
       transition: 0.4s;

@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import ButtonMain from '../../common/ButtonMain/ButtonMain';
 import TitleSection from '../../common/TitleSection/TitleSection';
 import img1 from '../../../assets/portfolio/1.jpg';
@@ -57,12 +57,15 @@ const Portfolio = () => {
         Portfolio
       </TitleSection>
       <Swiper
-        cssMode={true}
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        grabCursor={true}
+        pagination={{
+          clickable: true,
+        }}
         navigation={true}
-        pagination={true}
-        mousewheel={true}
-        keyboard={true}
-        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+        modules={[Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide style={{ textAlign: 'center' }}>
@@ -89,6 +92,32 @@ const Portfolio = () => {
       </Swiper>
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: 48 }}>
         <ButtonMain>download portfolio</ButtonMain>
+      </div>
+      <div className="portfolio__works">
+        <div className="portfolio__works-item">
+          <img className="portfolio__works-item--img" src={img1} alt="img1" />
+          <p className="portfolio__works-item--desc">description</p>
+        </div>
+        <div className="portfolio__works-item">
+          <img className="portfolio__works-item--img" src={img6} alt="img6" />
+          <p className="portfolio__works-item--desc">description</p>
+        </div>
+        <div className="portfolio__works-item">
+          <img className="portfolio__works-item--img" src={img7} alt="img7" />
+          <p className="portfolio__works-item--desc">description</p>
+        </div>
+        <div className="portfolio__works-item">
+          <img className="portfolio__works-item--img" src={img8} alt="img8" />
+          <p className="portfolio__works-item--desc">description</p>
+        </div>
+        <div className="portfolio__works-item">
+          <img className="portfolio__works-item--img" src={img9} alt="img9" />
+          <p className="portfolio__works-item--desc">description</p>
+        </div>
+        <div className="portfolio__works-item">
+          <img className="portfolio__works-item--img" src={img10} alt="img10" />
+          <p className="portfolio__works-item--desc">description</p>
+        </div>
       </div>
     </section>
   );
