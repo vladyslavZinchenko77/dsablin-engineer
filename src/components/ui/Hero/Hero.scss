@@ -41,6 +41,9 @@
         font-weight: 700;
         line-height: 114% ; 
         text-align: center;
+        @media screen and (max-width: $mobile-max) {
+            font-size: 36px;
+        }
 
     }
     .hero__introduce-subtitle{
@@ -50,6 +53,9 @@
         font-weight: 700;
         line-height: 114% ; 
         text-align: center;
+        @media screen and (max-width: $mobile-max) {
+            font-size: 24px;
+        }
     }
    
 }

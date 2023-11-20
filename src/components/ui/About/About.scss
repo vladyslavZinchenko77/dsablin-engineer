@@ -1,8 +1,9 @@
 @import "../../../styles/viriables.scss";
 
 .about{
-    padding: 56px 24px 0 56px;
+    padding: 56px 24px 24px 56px;
     position: relative;
+    background-color: $main-color;
     
     .about__img-wave{
         width: 100%;

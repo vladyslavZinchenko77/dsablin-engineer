@@ -7,6 +7,7 @@ import photoshop from '../../../assets/expierence-icons/photoshop.jpg';
 import avk from '../../../assets/expierence-icons/avk.jpg';
 import lira from '../../../assets/expierence-icons/lira.jpg';
 import TitleSection from '../../common/TitleSection/TitleSection';
+import { useBreakpoints } from '../../../hooks/useBreakpoints';
 import './Skills.scss';
 
 const skillsData = [
@@ -22,6 +23,7 @@ const skillsData = [
 
 const Skills = () => {
   const skillsRef = useRef<HTMLElement>(null);
+  const { isMobile } = useBreakpoints();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +54,7 @@ const Skills = () => {
 
   return (
     <section ref={skillsRef} className="skills" id="skills">
-      <TitleSection textAlign="left" id="skills-title">
+      <TitleSection textAlign={isMobile ? 'center' : 'left'} id="skills-title">
         Skills
       </TitleSection>
       <ul className="skills__list">

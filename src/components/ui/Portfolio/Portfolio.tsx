@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
+import { useBreakpoints } from '../../../hooks/useBreakpoints';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -31,6 +32,7 @@ const cardData = [
 
 const Portfolio = () => {
   const portfolioRef = useRef<HTMLElement>(null);
+  const { isMobile } = useBreakpoints();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,7 +63,10 @@ const Portfolio = () => {
 
   return (
     <section ref={portfolioRef} className="portfolio" id="portfolio">
-      <TitleSection textAlign="right" id="portfolio-title">
+      <TitleSection
+        textAlign={isMobile ? 'center' : 'right'}
+        id="portfolio-title"
+      >
         Portfolio
       </TitleSection>
       <Swiper

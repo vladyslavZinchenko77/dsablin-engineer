@@ -1,11 +1,18 @@
 import arrow from '../../../assets/img/arrow.svg';
+import { useBreakpoints } from '../../../hooks/useBreakpoints';
 import './Footer.scss';
 
 const Footer = () => {
+  const { isMobile } = useBreakpoints();
+
   return (
     <footer className="footer">
       <div className="footer__connect">
-        <img src={arrow} alt="arrow" />
+        <img
+          src={arrow}
+          alt="arrow"
+          style={{ transform: isMobile ? 'rotate(90deg)' : '' }}
+        />
         <div className="footer__connect-text">
           <p>Connect with me </p>
           <p style={{ fontSize: '26px' }}>Dmytro Sublin.</p>

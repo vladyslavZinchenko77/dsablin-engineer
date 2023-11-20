@@ -2,7 +2,7 @@
 
 .contacts{
     margin: 48px 0 0 0;
-    padding: 154px 154px;
+    padding: 154px 0;
     background-color: $main-color;
     position: relative;
     z-index: 5;
@@ -11,6 +11,9 @@
         font-weight: normal;
         font-size: 48px;
         color: #fff;
+        @media screen and (max-width: $mobile-max) {
+            font-size: 36px;
+        }
     }
     & img{
         position: absolute;
