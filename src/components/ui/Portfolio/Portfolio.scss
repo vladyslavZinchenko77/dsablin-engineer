@@ -19,6 +19,12 @@
     grid-template-columns: repeat(4,1fr);
     gap: 8px;
     margin-top: 48px;
+    @media screen and (max-width: $tablet-max) {
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media screen and (max-width: $tablet-min) {
+        display: none;
+    }
     .portfolio__works-item{
         .portfolio__works-item--img{
             width: 350px;

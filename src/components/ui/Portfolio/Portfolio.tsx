@@ -91,7 +91,7 @@ const Portfolio = () => {
         </SwiperSlide>
       </Swiper>
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: 48 }}>
-        <ButtonMain>download portfolio</ButtonMain>
+        <ButtonMain>more works</ButtonMain>
       </div>
       <div className="portfolio__works">
         <div className="portfolio__works-item">

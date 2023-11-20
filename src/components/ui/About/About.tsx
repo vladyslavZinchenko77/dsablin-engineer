@@ -1,7 +1,6 @@
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 import avatar from '../../../assets/img/avatar.jpg';
-import wave from '../../../assets/img/wave.svg';
 import TitleSection from '../../common/TitleSection/TitleSection';
 import './About.scss';
 
@@ -89,7 +88,6 @@ const About = () => {
           <img className="about__photo" src={avatar} alt="photo" />
         </div>
       </div>
-      <img className="about__img-wave" src={wave} alt="wave" />
     </section>
   );
 };
