@@ -1,10 +1,14 @@
 @import "../../../styles/viriables.scss";
 
+
 .section__title{
     font-size: 56px;
     font-style: normal;
     font-weight: 700;
-    color: $main-blue;
+    color: $black-color;
     line-height: 114%;
     padding: 0 24px;
+    @media screen and (max-width: $mobile-max) {
+        font-size: 36px;
+    }
 }

@@ -53,7 +53,7 @@ const Header = () => {
             <li className="header__nav-item">
               <button
                 className="header__nav-item-link"
-                onClick={() => handleLinkClick('expierence')}
+                onClick={() => handleLinkClick('experience')}
               >
                 Expierence
               </button>

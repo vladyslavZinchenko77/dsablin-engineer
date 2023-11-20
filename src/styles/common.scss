@@ -1,0 +1,16 @@
+@import "./viriables.scss";
+
+
+
+//  Swiper Slider
+
+.swiper-button-prev{
+    color: black;
+}
+.swiper-button-next{
+    color: black;
+}
+.swiper-pagination-bullet{
+    color: $main-color;
+    background-color: $main-color;
+}

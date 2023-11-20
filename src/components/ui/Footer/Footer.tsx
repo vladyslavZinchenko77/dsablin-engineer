@@ -1,20 +1,29 @@
 import arrow from '../../../assets/img/arrow.svg';
+import { useBreakpoints } from '../../../hooks/useBreakpoints';
 import './Footer.scss';
 
 const Footer = () => {
+  const { isMobile } = useBreakpoints();
+
   return (
     <footer className="footer">
       <div className="footer__connect">
-        <img src={arrow} alt="arrow" />
+        <img
+          src={arrow}
+          alt="arrow"
+          style={{ transform: isMobile ? 'rotate(90deg)' : '' }}
+        />
         <div className="footer__connect-text">
           <p>Connect with me </p>
           <p style={{ fontSize: '26px' }}>Dmytro Sublin.</p>
         </div>
       </div>
       <div className="footer__contacts">
-        <a href="tel:+380661009920">+38 066 100 9920 (telegram/viber)</a>
+        <a href="tel:+380661009920">+38 066 100 9920 </a>
         <a href="mailto:dmutrosablin@gmail.com">dmutrosablin@gmail.com</a>
-        <a href="facebook.com"></a>
+        <a href="https://t.me/SDmutro" target="_blank">
+          @SDmutro (telegram)
+        </a>
       </div>
       <div className="footer__copyright">
         <p>© 2023 Dmytro Sublin engineer</p>

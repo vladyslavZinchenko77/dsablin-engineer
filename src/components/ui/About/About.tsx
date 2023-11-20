@@ -1,12 +1,13 @@
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 import avatar from '../../../assets/img/avatar.jpg';
-import wave from '../../../assets/img/wave.svg';
 import TitleSection from '../../common/TitleSection/TitleSection';
+import { useBreakpoints } from '../../../hooks/useBreakpoints';
 import './About.scss';
 
 const About = () => {
   const aboutRef = useRef<HTMLElement>(null);
+  const { isMobile } = useBreakpoints();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +48,7 @@ const About = () => {
 
   return (
     <section ref={aboutRef} className="about" id="about">
-      <TitleSection id="about-title" textAlign="left">
+      <TitleSection id="about-title" textAlign={isMobile ? 'center' : 'left'}>
         About me
       </TitleSection>
       <div className="about__content">
@@ -89,7 +90,6 @@ const About = () => {
           <img className="about__photo" src={avatar} alt="photo" />
         </div>
       </div>
-      <img className="about__img-wave" src={wave} alt="wave" />
     </section>
   );
 };

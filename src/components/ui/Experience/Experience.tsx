@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import ButtonMain from '../../common/ButtonMain/ButtonMain';
 import teamwork from '../../../assets/img/workers.png';
 import TitleSection from '../../common/TitleSection/TitleSection';
+import { useBreakpoints } from '../../../hooks/useBreakpoints';
 import './Experience.scss';
 
 const experienceData = [
@@ -38,6 +39,7 @@ const experienceData = [
 
 const Experience = () => {
   const experienceRef = useRef<HTMLElement>(null);
+  const { isMobile } = useBreakpoints();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,7 +92,10 @@ const Experience = () => {
 
   return (
     <section ref={experienceRef} className="experience" id="experience">
-      <TitleSection textAlign="right" id="experience-title">
+      <TitleSection
+        textAlign={isMobile ? 'center' : 'right'}
+        id="experience-title"
+      >
         Work experience
       </TitleSection>
       <div className="experience__content">

@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
+import { useBreakpoints } from '../../../hooks/useBreakpoints';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -9,20 +10,29 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import ButtonMain from '../../common/ButtonMain/ButtonMain';
 import TitleSection from '../../common/TitleSection/TitleSection';
-import img1 from '../../../assets/portfolio/1.jpg';
-import img6 from '../../../assets/portfolio/6.jpg';
-import img7 from '../../../assets/portfolio/7.jpg';
-import img8 from '../../../assets/portfolio/8.jpg';
-import img9 from '../../../assets/portfolio/9.jpg';
-import img10 from '../../../assets/portfolio/10.jpg';
-import img11 from '../../../assets/portfolio/11.jpg';
+import Card from '../../common/Card/Card';
+import img1 from '../../../assets/portfolio/virovskogo.jpg';
+import img2 from '../../../assets/portfolio/bashnya1.jpeg';
+import img3 from '../../../assets/portfolio/tcnap.jpg';
+import img4 from '../../../assets/portfolio/richport.jpeg';
+
 import './Portfolio.scss';
+
+const mainWorks = [img1, img2, img3, img4];
+
+const cardData = [
+  { img: img1, description: 'вировское_рабочая башня' },
+  { img: img2, description: 'kombikorm' },
+  { img: img3, description: 'ЦНАП у м.Бахмут, Донецької обл' },
+  { img: img4, description: 'Річковий порт' },
+];
 
 const Portfolio = () => {
   const portfolioRef = useRef<HTMLElement>(null);
+  const { isMobile } = useBreakpoints();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,42 +63,39 @@ const Portfolio = () => {
 
   return (
     <section ref={portfolioRef} className="portfolio" id="portfolio">
-      <TitleSection textAlign="right" id="portfolio-title">
+      <TitleSection
+        textAlign={isMobile ? 'center' : 'right'}
+        id="portfolio-title"
+      >
         Portfolio
       </TitleSection>
       <Swiper
-        cssMode={true}
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        grabCursor={true}
+        pagination={{
+          clickable: true,
+        }}
         navigation={true}
-        pagination={true}
-        mousewheel={true}
-        keyboard={true}
-        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+        modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img1} alt="img1" />
-        </SwiperSlide>
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img6} alt="img6" />
-        </SwiperSlide>
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img7} alt="img7" />
-        </SwiperSlide>
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img8} alt="img8" />
-        </SwiperSlide>
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img9} alt="img9" />
-        </SwiperSlide>
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img10} alt="img10" />
-        </SwiperSlide>
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img11} alt="img11" />
-        </SwiperSlide>
+        {mainWorks.map((work) => {
+          return (
+            <SwiperSlide style={{ textAlign: 'center' }}>
+              <img src={work} alt="img" />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: 48 }}>
-        <ButtonMain>download portfolio</ButtonMain>
+        <ButtonMain>more works</ButtonMain>
+      </div>
+      <div className="portfolio__works">
+        {cardData.map((card) => {
+          return <Card img={card.img} description={card.description} />;
+        })}
       </div>
     </section>
   );

@@ -6,14 +6,25 @@
 
 }
 
-
-
-
 .mySwiper{
+    margin-top: 72px;
     max-width: 80%;
     height: 400px;
-    margin-top: 48px;
+
     & img{
         max-height: 400px;
     }
+}
+.portfolio__works{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 8px;
+    margin-top: 48px;
+    @media screen and (max-width: $tablet-max) {
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media screen and (max-width: $tablet-min) {
+        display: none;
+    }
+
 }

@@ -2,14 +2,23 @@
 
 
 .skills{
-    margin: 48px;
-    padding: 24px;
+    margin: 48px 0;
+    padding: 100px 0;
+    background-color: $main-color;
 }
 
 .skills__list{
-    display: flex;
-    justify-content: space-between;
+   
     margin-top: 48px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+   @media screen and (max-width: $tablet-max) {
+    grid-template-columns: repeat(4, 1fr);
+   }
+   @media screen and (max-width: $tablet-min) {
+    grid-template-columns: repeat(2, 1fr);
+   }
     .skills__list-item{
         list-style: none;
         display: flex;

@@ -16,9 +16,9 @@ const Contacts = () => {
         const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
 
         if (isVisible) {
-          gsap.to('.footer', { y: 0, opacity: 1, duration: 1, delay: 2 });
+          gsap.to('.footer', { y: 0, duration: 1, delay: 2 });
         } else {
-          gsap.to('.footer', { y: '-100%', opacity: 1, duration: 1, delay: 2 });
+          gsap.to('.footer', { y: '-100%', duration: 1, delay: 2 });
         }
       }
     };

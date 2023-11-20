@@ -11,9 +11,13 @@
     right: 0;
     z-index: 5;
     padding: 24px;
-    background-color: $main-blue;
+    background-color: $main-color;
     transform: translateY(0);
     transition: 0.2s;
+    @media screen and (max-width: $mobile-max) {
+        justify-content: center;
+        
+    }
 }
 
 .header--close {
@@ -25,6 +29,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: $mobile-max) {
+        flex-direction: column;
+    }
 
     .header__nav-item {
         list-style: none;
@@ -33,12 +40,16 @@
             text-decoration: none;
             margin-left: 24px;
             position: relative;
-            color: #fff;
+            color: $black-color;
             background: none;
             border: none;
             box-shadow: none;
             font-size: 16px;
             cursor: pointer;
+            @media screen and (max-width: $mobile-max) {
+               padding: 24px 0;
+               font-size: 24px;
+            }
 
             &::after {
                 content: '';
@@ -47,9 +58,10 @@
                 right: 0;
                 bottom: -4px;
                 height: 2px;
-                background-color: #fff;
+                background-color: $black-color;
                 transform: scaleX(0);
                 transition: transform 0.3s ease;
+                
             }
 
             &:hover::after {

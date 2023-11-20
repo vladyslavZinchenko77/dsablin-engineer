@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import panorama from '../../../assets/img/panorama-black-white.png';
+import panorama from '../../../assets/img/panorama.png';
 import Lang from '../../common/Lang/Lang';
 import './Hero.scss';
 
