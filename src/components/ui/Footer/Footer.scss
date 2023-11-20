@@ -27,6 +27,8 @@
         flex-direction: column;
         & a{
             color: $white-color;
+            text-decoration: none;
+            padding: 8px 0 0;
         }
         @media screen and (max-width: $tablet-min){
             padding-top: 24px;
