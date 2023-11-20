@@ -12,14 +12,22 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import ButtonMain from '../../common/ButtonMain/ButtonMain';
 import TitleSection from '../../common/TitleSection/TitleSection';
-import img1 from '../../../assets/portfolio/1.jpg';
-import img6 from '../../../assets/portfolio/6.jpg';
-import img7 from '../../../assets/portfolio/7.jpg';
-import img8 from '../../../assets/portfolio/8.jpg';
-import img9 from '../../../assets/portfolio/9.jpg';
-import img10 from '../../../assets/portfolio/10.jpg';
-import img11 from '../../../assets/portfolio/11.jpg';
+import Card from '../../common/Card/Card';
+import img1 from '../../../assets/portfolio/virovskogo.jpg';
+import img2 from '../../../assets/portfolio/bashnya1.jpeg';
+import img3 from '../../../assets/portfolio/tcnap.jpg';
+import img4 from '../../../assets/portfolio/richport.jpeg';
+
 import './Portfolio.scss';
+
+const mainWorks = [img1, img2, img3, img4];
+
+const cardData = [
+  { img: img1, description: 'вировское_рабочая башня' },
+  { img: img2, description: 'kombikorm' },
+  { img: img3, description: 'ЦНАП у м.Бахмут, Донецької обл' },
+  { img: img4, description: 'Річковий порт' },
+];
 
 const Portfolio = () => {
   const portfolioRef = useRef<HTMLElement>(null);
@@ -68,56 +76,21 @@ const Portfolio = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img1} alt="img1" />
-        </SwiperSlide>
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img6} alt="img6" />
-        </SwiperSlide>
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img7} alt="img7" />
-        </SwiperSlide>
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img8} alt="img8" />
-        </SwiperSlide>
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img9} alt="img9" />
-        </SwiperSlide>
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img10} alt="img10" />
-        </SwiperSlide>
-        <SwiperSlide style={{ textAlign: 'center' }}>
-          <img src={img11} alt="img11" />
-        </SwiperSlide>
+        {mainWorks.map((work) => {
+          return (
+            <SwiperSlide style={{ textAlign: 'center' }}>
+              <img src={work} alt="img" />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: 48 }}>
         <ButtonMain>more works</ButtonMain>
       </div>
       <div className="portfolio__works">
-        <div className="portfolio__works-item">
-          <img className="portfolio__works-item--img" src={img1} alt="img1" />
-          <p className="portfolio__works-item--desc">description</p>
-        </div>
-        <div className="portfolio__works-item">
-          <img className="portfolio__works-item--img" src={img6} alt="img6" />
-          <p className="portfolio__works-item--desc">description</p>
-        </div>
-        <div className="portfolio__works-item">
-          <img className="portfolio__works-item--img" src={img7} alt="img7" />
-          <p className="portfolio__works-item--desc">description</p>
-        </div>
-        <div className="portfolio__works-item">
-          <img className="portfolio__works-item--img" src={img8} alt="img8" />
-          <p className="portfolio__works-item--desc">description</p>
-        </div>
-        <div className="portfolio__works-item">
-          <img className="portfolio__works-item--img" src={img9} alt="img9" />
-          <p className="portfolio__works-item--desc">description</p>
-        </div>
-        <div className="portfolio__works-item">
-          <img className="portfolio__works-item--img" src={img10} alt="img10" />
-          <p className="portfolio__works-item--desc">description</p>
-        </div>
+        {cardData.map((card) => {
+          return <Card img={card.img} description={card.description} />;
+        })}
       </div>
     </section>
   );
