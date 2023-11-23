@@ -31,6 +31,14 @@ import riverportImg1 from '../../../assets/portfolio/речпорт/1.jpg';
 import riverportImg2 from '../../../assets/portfolio/речпорт/2.jpg';
 import riverportImg3 from '../../../assets/portfolio/речпорт/3.jpeg';
 
+import vyrovskogoImg1 from '../../../assets/portfolio/virovskogo/1.jpg';
+import vyrovskogoImg2 from '../../../assets/portfolio/virovskogo/2.jpg';
+import vyrovskogoImg3 from '../../../assets/portfolio/virovskogo/3.jpg';
+import vyrovskogoImg4 from '../../../assets/portfolio/virovskogo/4.jpg';
+import vyrovskogoImg5 from '../../../assets/portfolio/virovskogo/5.jpg';
+import vyrovskogoImg6 from '../../../assets/portfolio/virovskogo/6.jpg';
+import vyrovskogoImg7 from '../../../assets/portfolio/virovskogo/7.jpg';
+
 import './Portfolio.scss';
 
 const mainWorks = [img1, img2, img3, img4];
@@ -41,13 +49,25 @@ const bakhmutData = [
   bakhmutImg4,
   bakhmutImg5,
 ];
+const vyrovskogoData = [
+  vyrovskogoImg1,
+  vyrovskogoImg2,
+  vyrovskogoImg3,
+  vyrovskogoImg4,
+  vyrovskogoImg5,
+  vyrovskogoImg6,
+  vyrovskogoImg7,
+];
 
 const kombikornData = [kombikornimg1, kombikornimg2, kombikornimg3];
-
 const riverPort = [riverportImg1, riverportImg2, riverportImg3];
 
 const cardData = [
-  { img: img1, description: 'вировское_рабочая башня', content: mainWorks },
+  {
+    img: img1,
+    description: 'вировское_рабочая башня',
+    content: vyrovskogoData,
+  },
   { img: img2, description: 'kombikorm', content: kombikornData },
   {
     img: img3,
@@ -97,9 +117,28 @@ const Portfolio: FC = () => {
     }
   }, [selectCard]);
 
+  useEffect(() => {
+    const handleClick = () => {
+      setSelectCard(null);
+      setCarouselTitle('');
+      setCarouselImg(mainWorks);
+    };
+
+    const portfolioElement = document.querySelector('.portfolio');
+    if (portfolioElement) {
+      portfolioElement.addEventListener('click', handleClick);
+    }
+
+    return () => {
+      if (portfolioElement) {
+        portfolioElement.removeEventListener('click', handleClick);
+      }
+    };
+  }, []);
   return (
     <section ref={portfolioRef} className="portfolio" id="portfolio">
       <TitleSection
+        color="#FDD835"
         textAlign={isMobile ? 'center' : 'right'}
         id="portfolio-title"
       >

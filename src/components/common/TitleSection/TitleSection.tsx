@@ -5,11 +5,18 @@ interface TitleSectionProps {
   textAlign: 'left' | 'center' | 'right';
   children: string;
   id?: string;
+  color?: string;
 }
 
-const TitleSection: FC<TitleSectionProps> = ({ textAlign, children, id }) => {
+const TitleSection: FC<TitleSectionProps> = ({
+  textAlign,
+  children,
+  id,
+  color,
+}) => {
   const styles = {
     textAlign: textAlign,
+    color: color,
   };
 
   return (
