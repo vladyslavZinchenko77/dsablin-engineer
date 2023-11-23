@@ -2,58 +2,6 @@
 @import "../../../styles/viriables.scss";
 
 
-// .card{
-//     position: relative;
-    
-//     .card__img{
-//         width: 350px;
-//         height: 200px;
-//         border-radius: 10px;
-//         border: 2px solid $main-color;
-//         cursor: pointer;
-//         background-position: center;
-//         background-size: cover;
-//         background-repeat: no-repeat;
-    
-        
-//     }
-//     .card__desc{
-//         text-align: left;
-//         padding: 8px;
-//     }
-//     .card__cover{
-//         background-color: $main-color;
-//         width: 350px;
-//         height: 200px;
-//         border-radius: 10px;
-//         border: 2px solid $main-color;
-//         opacity: 0.5;
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//         cursor: pointer;
-//     }
-//     &:hover{
-//         .card__cover{
-//             background-color: $main-color;
-//             width: 350px;
-//             height: 200px;
-//             border-radius: 10px;
-//             opacity: 1;
-//             position: absolute;
-//             top: 0;
-//             left: 200px;
-//             right: 0;
-//             bottom: 0;
-//             cursor: pointer;
-//         }
-//     }
-// }
-
-
-
 .card {
     position: relative;
     width: 350px;
@@ -63,11 +11,13 @@
       width: 350px;
       height: 200px;
       border-radius: 10px;
-    //   border: 1px solid $main-color;
+      border: 1px solid $main-color;
+      box-sizing: border-box;
       cursor: pointer;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+      
     }
   
     .card__desc {
@@ -104,6 +54,41 @@
             box-sizing: border-box;
         }
     }
+    
   
+  }
+  
+
+  .card__selected {
+    position: relative;
+    width: 350px;
+    
+    .card__img {
+      width: 350px;
+      height: 200px;
+      border-radius: 10px;
+      border: 1px solid $main-color;
+      box-sizing: border-box;
+      cursor: pointer;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      
+    }
+  
+    .card__desc {
+      text-align: left;
+      padding: 8px;
+    }
+  
+    .card__cover {  
+      transition: 0.4s;
+      
+    }
+    .card__desc {
+      color: $main-color;
+    }
+  
+
   }
   
