@@ -122,25 +122,6 @@ const Portfolio: FC = () => {
     }
   }, [selectCard]);
 
-  useEffect(() => {
-    const handleClick = () => {
-      setSelectCard(null);
-      setCarouselTitle('');
-      setCarouselImg(mainWorks);
-    };
-
-    const portfolioElement = document.querySelector('.portfolio');
-    if (portfolioElement) {
-      portfolioElement.addEventListener('click', handleClick);
-    }
-
-    return () => {
-      if (portfolioElement) {
-        portfolioElement.removeEventListener('click', handleClick);
-      }
-    };
-  }, []);
-
   return (
     <section ref={portfolioRef} className="portfolio" id="portfolio">
       <TitleSection
