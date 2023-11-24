@@ -23,6 +23,7 @@
     .card__desc {
       text-align: left;
       padding: 8px;
+      color: #fff;
     }
   
     .card__cover {
@@ -36,12 +37,12 @@
       right: 0;
       bottom: 0;
       cursor: pointer;
-      transition: 0.4s;
+      transition: 0.5s;
       
     }
     &:hover{
         .card__cover{
-            transition: 0.4s;
+            transition: 0.5s;
             opacity: 0;
             top: 0;
             left: 350px;
@@ -79,16 +80,13 @@
     .card__desc {
       text-align: left;
       padding: 8px;
+      color: $main-color;
     }
   
     .card__cover {  
       transition: 0.4s;
       
     }
-    .card__desc {
-      color: $main-color;
-    }
-  
 
   }
   

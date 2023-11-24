@@ -8,7 +8,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import ButtonMain from '../../common/ButtonMain/ButtonMain';
 import TitleSection from '../../common/TitleSection/TitleSection';
 import Card from '../../common/Card/Card';
 
@@ -80,7 +79,6 @@ const cardData = [
 const Portfolio: FC = () => {
   const [carouselImg, setCarouselImg] = useState<string[]>(mainWorks);
   const [carouseTitle, setCarouselTitle] = useState<string>('');
-  const [worksVisible, setWorksVisible] = useState<boolean>(false);
   const [selectCard, setSelectCard] = useState<number | null>();
   const portfolioRef = useRef<HTMLElement>(null);
   const { isMobile } = useBreakpoints();
@@ -88,6 +86,7 @@ const Portfolio: FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const portfolioElement = portfolioRef.current;
+      const tl = gsap.timeline({ defaults: { duration: 0.5 } });
 
       if (portfolioElement) {
         const rect = portfolioElement.getBoundingClientRect();
@@ -96,9 +95,15 @@ const Portfolio: FC = () => {
         if (isVisible) {
           gsap.to('#portfolio-title', { x: 0, opacity: 1, duration: 1 });
           gsap.to('.mySwiper', { opacity: 1, duration: 1, delay: 1 });
+          document.querySelectorAll('.card').forEach((card, index) => {
+            tl.to(card, { y: 0, opacity: 1, delay: index * 0.1 }, '+=0.1');
+          });
         } else {
           gsap.to('#portfolio-title', { x: '100%', opacity: 0, duration: 1 });
           gsap.to('.mySwiper', { opacity: 0, duration: 1, delay: 1 });
+          document.querySelectorAll('.card').forEach((card, index) => {
+            tl.to(card, { y: '100%', opacity: 0, delay: index * 0.1 }, '+=0.1');
+          });
         }
       }
     };
@@ -135,6 +140,7 @@ const Portfolio: FC = () => {
       }
     };
   }, []);
+
   return (
     <section ref={portfolioRef} className="portfolio" id="portfolio">
       <TitleSection
@@ -168,29 +174,23 @@ const Portfolio: FC = () => {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <h2 className="portfolio__carousel-title">{carouseTitle}</h2>
       </div>
-      {worksVisible && (
-        <div className="portfolio__works">
-          {cardData.map((card, index) => {
-            return (
-              <Card
-                img={card.img}
-                description={card.description}
-                key={index}
-                isSelected={index === selectCard}
-                oncklick={() => {
-                  setCarouselImg(card.content);
-                  setCarouselTitle(card.description);
-                  setSelectCard(index);
-                }}
-              />
-            );
-          })}
-        </div>
-      )}
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: 48 }}>
-        <ButtonMain oncklick={() => setWorksVisible(!worksVisible)}>
-          {worksVisible ? 'hide works' : 'more works'}
-        </ButtonMain>
+
+      <div className="portfolio__works">
+        {cardData.map((card, index) => {
+          return (
+            <Card
+              img={card.img}
+              description={card.description}
+              key={index}
+              isSelected={index === selectCard}
+              oncklick={() => {
+                setCarouselImg(card.content);
+                setCarouselTitle(card.description);
+                setSelectCard(index);
+              }}
+            />
+          );
+        })}
       </div>
     </section>
   );
