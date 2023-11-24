@@ -54,7 +54,10 @@ const Skills = () => {
 
   return (
     <section ref={skillsRef} className="skills" id="skills">
-      <TitleSection textAlign={isMobile ? 'center' : 'left'} id="skills-title">
+      <TitleSection
+        id="skills-title"
+        justifyContent={isMobile ? 'center' : 'flex-start'}
+      >
         Skills
       </TitleSection>
       <ul className="skills__list">

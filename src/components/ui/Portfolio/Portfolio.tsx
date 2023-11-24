@@ -126,8 +126,9 @@ const Portfolio: FC = () => {
     <section ref={portfolioRef} className="portfolio" id="portfolio">
       <TitleSection
         color="#FDD835"
-        textAlign={isMobile ? 'center' : 'right'}
+        lineColor="#FDD835"
         id="portfolio-title"
+        justifyContent={isMobile ? 'center' : 'flex-end'}
       >
         Portfolio
       </TitleSection>

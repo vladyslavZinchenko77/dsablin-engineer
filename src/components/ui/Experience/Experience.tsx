@@ -93,7 +93,8 @@ const Experience = () => {
   return (
     <section ref={experienceRef} className="experience" id="experience">
       <TitleSection
-        textAlign={isMobile ? 'center' : 'right'}
+        lineColor="#FDD835"
+        justifyContent={isMobile ? 'center' : 'flex-end'}
         id="experience-title"
       >
         Work experience
