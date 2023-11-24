@@ -1,8 +1,8 @@
 @import  "../../../styles/viriables.scss";
 
 .portfolio{
-    margin: 148px 0 ;
-    padding: 0 24px;
+    padding: 148px 24px;
+    background-color: $black-color;
 
 }
 
@@ -14,6 +14,10 @@
     & img{
         max-height: 400px;
     }
+}
+.portfolio__carousel-title{
+    color: $main-color;
+    padding-top: 24px;
 }
 .portfolio__works{
     display: grid;

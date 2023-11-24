@@ -4,11 +4,12 @@ import './ButtonMain.scss';
 interface ButtonMainProps {
   children: string;
   style?: React.CSSProperties;
+  oncklick?: () => void;
 }
 
-const ButtonMain: FC<ButtonMainProps> = ({ children, style }) => {
+const ButtonMain: FC<ButtonMainProps> = ({ children, style, oncklick }) => {
   return (
-    <button style={style} className="button-main">
+    <button onClick={oncklick} style={style} className="button-main">
       {children}
     </button>
   );
