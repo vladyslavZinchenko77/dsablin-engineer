@@ -59,6 +59,12 @@ const Hero: FC = () => {
       ease: 'power3.out',
       delay: 4,
     });
+    gsap.from('.scroll-icon', { opacity: 0 });
+    gsap.to('.scroll-icon', { opacity: 1, delay: 5, duration: 1 });
+    gsap.from('.burger-icon', { opacity: 0 });
+    gsap.to('.burger-icon', { opacity: 1, delay: 5, duration: 1 });
+    gsap.from('.lang', { opacity: 0 });
+    gsap.to('.lang', { opacity: 1, delay: 5, duration: 1 });
   }, []);
 
   return (
