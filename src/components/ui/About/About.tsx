@@ -48,7 +48,10 @@ const About = () => {
 
   return (
     <section ref={aboutRef} className="about" id="about">
-      <TitleSection id="about-title" textAlign={isMobile ? 'center' : 'left'}>
+      <TitleSection
+        id="about-title"
+        justifyContent={isMobile ? 'center' : 'flex-start'}
+      >
         About me
       </TitleSection>
       <div className="about__content">

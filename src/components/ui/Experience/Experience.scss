@@ -1,4 +1,5 @@
 @import "../../../styles/viriables.scss";
+
 .experience{
     margin: 62px 0 62px 0;
     padding: 0 24px;
@@ -21,9 +22,9 @@
 }
 
 
-
 .experience__works{
     padding: 24px;
+    list-style-image: url('../../../assets/img/ellipse.svg');
     .experience__works-item{
         padding: 24px;
         .experience__works-item-period{

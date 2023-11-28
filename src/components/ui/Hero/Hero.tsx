@@ -1,10 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import panorama from '../../../assets/img/panorama.png';
 import Lang from '../../common/Lang/Lang';
+import ScrollDown from '../../common/ScrollDown/ScrollDown';
 import './Hero.scss';
 
-const Hero = () => {
+const Hero: FC = () => {
   const introduceRef = useRef(null);
 
   useEffect(() => {
@@ -58,6 +59,12 @@ const Hero = () => {
       ease: 'power3.out',
       delay: 4,
     });
+    gsap.from('.scroll-icon', { opacity: 0 });
+    gsap.to('.scroll-icon', { opacity: 1, delay: 5, duration: 1 });
+    gsap.from('.burger-icon', { opacity: 0 });
+    gsap.to('.burger-icon', { opacity: 1, delay: 5, duration: 1 });
+    gsap.from('.lang', { opacity: 0 });
+    gsap.to('.lang', { opacity: 1, delay: 5, duration: 1 });
   }, []);
 
   return (
@@ -66,6 +73,7 @@ const Hero = () => {
       <div ref={introduceRef} className="hero__introduce">
         <h1 className="hero__introduce-title">Hi, I am Dmytro Sublin</h1>
         <h2 className="hero__introduce-subtitle">a construction engineer</h2>
+        <ScrollDown />
       </div>
       <img
         className="hero__avatar-img--panorama"

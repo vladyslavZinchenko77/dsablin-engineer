@@ -81,11 +81,13 @@ const Portfolio: FC = () => {
   const [carouseTitle, setCarouselTitle] = useState<string>('');
   const [selectCard, setSelectCard] = useState<number | null>();
   const portfolioRef = useRef<HTMLElement>(null);
+  const worksRef = useRef<HTMLDivElement>(null);
   const { isMobile } = useBreakpoints();
 
   useEffect(() => {
     const handleScroll = () => {
       const portfolioElement = portfolioRef.current;
+      const worksElement = worksRef.current;
       const tl = gsap.timeline({ defaults: { duration: 0.5 } });
 
       if (portfolioElement) {
@@ -95,14 +97,22 @@ const Portfolio: FC = () => {
         if (isVisible) {
           gsap.to('#portfolio-title', { x: 0, opacity: 1, duration: 1 });
           gsap.to('.mySwiper', { opacity: 1, duration: 1, delay: 1 });
-          document.querySelectorAll('.card').forEach((card, index) => {
-            tl.to(card, { y: 0, opacity: 1, delay: index * 0.1 }, '+=0.1');
-          });
         } else {
           gsap.to('#portfolio-title', { x: '100%', opacity: 0, duration: 1 });
           gsap.to('.mySwiper', { opacity: 0, duration: 1, delay: 1 });
-          document.querySelectorAll('.card').forEach((card, index) => {
-            tl.to(card, { y: '100%', opacity: 0, delay: index * 0.1 }, '+=0.1');
+        }
+      }
+
+      if (worksElement) {
+        const rect = worksElement.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+        if (isVisible) {
+          document.querySelectorAll('.card').forEach((card) => {
+            tl.to(card, { y: 0, opacity: 1, delay: 0.1 }, '+=0.1');
+          });
+        } else {
+          document.querySelectorAll('.card').forEach((card) => {
+            tl.to(card, { y: '100%', opacity: 0, delay: 0.1 }, '+=0.1');
           });
         }
       }
@@ -126,8 +136,9 @@ const Portfolio: FC = () => {
     <section ref={portfolioRef} className="portfolio" id="portfolio">
       <TitleSection
         color="#FDD835"
-        textAlign={isMobile ? 'center' : 'right'}
+        lineColor="#FDD835"
         id="portfolio-title"
+        justifyContent={isMobile ? 'center' : 'flex-end'}
       >
         Portfolio
       </TitleSection>
@@ -156,7 +167,7 @@ const Portfolio: FC = () => {
         <h2 className="portfolio__carousel-title">{carouseTitle}</h2>
       </div>
 
-      <div className="portfolio__works">
+      <div className="portfolio__works" ref={worksRef}>
         {cardData.map((card, index) => {
           return (
             <Card

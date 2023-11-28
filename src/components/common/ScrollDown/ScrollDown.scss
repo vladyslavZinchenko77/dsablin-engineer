@@ -1,0 +1,27 @@
+.scroll-icon{
+    margin-top: 80px;
+
+
+    .arrow.one{
+        margin-top: 50px;
+        animation: scroll 2s  infinite;
+    }
+    .arrow.two{
+        
+        position: relative;
+        bottom: 40px;
+        animation: scroll 2s  infinite 1s;
+    }
+    
+}
+
+
+@keyframes scroll {
+    from{
+        transform: translateY(1);
+        opacity: 1;
+    }to{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+}

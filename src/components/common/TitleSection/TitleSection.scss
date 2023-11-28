@@ -2,6 +2,7 @@
 
 
 .section__title{
+    position: relative;
     font-size: 56px;
     font-style: normal;
     font-weight: 700;
@@ -11,4 +12,5 @@
     @media screen and (max-width: $mobile-max) {
         font-size: 36px;
     }
+
 }

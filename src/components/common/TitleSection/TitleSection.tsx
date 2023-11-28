@@ -1,28 +1,38 @@
 import { FC } from 'react';
+import Line from '../Line/Line';
 import './TitleSection.scss';
 
 interface TitleSectionProps {
-  textAlign: 'left' | 'center' | 'right';
   children: string;
   id?: string;
   color?: string;
+  justifyContent?: string;
+  lineColor?: string;
 }
 
 const TitleSection: FC<TitleSectionProps> = ({
-  textAlign,
   children,
   id,
   color,
+  justifyContent,
+  lineColor,
 }) => {
-  const styles = {
-    textAlign: textAlign,
-    color: color,
-  };
-
   return (
-    <h2 id={id} className="section__title" style={styles}>
-      {children}
-    </h2>
+    <div style={{ display: 'flex', justifyContent: justifyContent }}>
+      <h2
+        id={id}
+        className="section__title"
+        style={{
+          color: color,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        {children}
+        <Line color={lineColor} />
+      </h2>
+    </div>
   );
 };
 
