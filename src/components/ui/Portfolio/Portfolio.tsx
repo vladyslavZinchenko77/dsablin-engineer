@@ -95,14 +95,14 @@ const Portfolio: FC = () => {
         if (isVisible) {
           gsap.to('#portfolio-title', { x: 0, opacity: 1, duration: 1 });
           gsap.to('.mySwiper', { opacity: 1, duration: 1, delay: 1 });
-          document.querySelectorAll('.card').forEach((card, index) => {
-            tl.to(card, { y: 0, opacity: 1, delay: index * 0.1 }, '+=0.1');
+          document.querySelectorAll('.card').forEach((card) => {
+            tl.to(card, { y: 0, opacity: 1, delay: 0.5 }, '+=0.1');
           });
         } else {
           gsap.to('#portfolio-title', { x: '100%', opacity: 0, duration: 1 });
           gsap.to('.mySwiper', { opacity: 0, duration: 1, delay: 1 });
-          document.querySelectorAll('.card').forEach((card, index) => {
-            tl.to(card, { y: '100%', opacity: 0, delay: index * 0.1 }, '+=0.1');
+          document.querySelectorAll('.card').forEach((card) => {
+            tl.to(card, { y: '100%', opacity: 0, delay: 0.5 }, '+=0.1');
           });
         }
       }

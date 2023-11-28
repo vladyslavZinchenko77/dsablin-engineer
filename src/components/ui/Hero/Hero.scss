@@ -30,6 +30,7 @@
 .hero__introduce{
     width: 50%;
     background-color: $main-color;
+    position: relative;
     @media screen and (max-width: $tablet-min) {
         width: 100%;
     }
@@ -56,6 +57,11 @@
         @media screen and (max-width: $mobile-max) {
             font-size: 24px;
         }
+    }
+    .scroll-icon{
+        position: absolute ;
+        bottom: 2%;
+        right: 6%;
     }
    
 }
