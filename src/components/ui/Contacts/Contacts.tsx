@@ -1,12 +1,15 @@
 import gsap from 'gsap';
+
 import { useEffect, useRef } from 'react';
-import plain from '../../../assets/img/plane.svg';
+import { useTranslation } from 'react-i18next';
+
 import Plane from '../../common/Plane/Plane';
 
 import './Contacts.scss';
 
 const Contacts = () => {
   const contactsRef = useRef<HTMLElement>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,9 +39,8 @@ const Contacts = () => {
   return (
     <section ref={contactsRef} className="contacts" id="contact">
       <h2 className="contacts__title">
-        More information? <br /> Contact me.
+        {t('contacts.title')} <br /> {t('contacts.subtitle')}
       </h2>
-      {/* <img src={plain} alt="plain" /> */}
       <Plane />
     </section>
   );

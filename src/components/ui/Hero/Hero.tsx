@@ -1,4 +1,5 @@
 import { FC, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import panorama from '../../../assets/img/panorama.png';
 import Lang from '../../common/Lang/Lang';
@@ -7,6 +8,7 @@ import './Hero.scss';
 
 const Hero: FC = () => {
   const introduceRef = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     gsap.from(introduceRef.current, {
@@ -71,8 +73,8 @@ const Hero: FC = () => {
     <section className="hero">
       <Lang />
       <div ref={introduceRef} className="hero__introduce">
-        <h1 className="hero__introduce-title">Hi, I am Dmytro Sublin</h1>
-        <h2 className="hero__introduce-subtitle">a construction engineer</h2>
+        <h1 className="hero__introduce-title">{t('hero.title')}</h1>
+        <h2 className="hero__introduce-subtitle">{t('hero.subtitle')}</h2>
         <ScrollDown />
       </div>
       <img

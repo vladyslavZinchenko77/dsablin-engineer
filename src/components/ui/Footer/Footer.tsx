@@ -1,9 +1,13 @@
-import arrow from '../../../assets/img/arrow.svg';
 import { useBreakpoints } from '../../../hooks/useBreakpoints';
+import { useTranslation } from 'react-i18next';
+
+import arrow from '../../../assets/img/arrow.svg';
+
 import './Footer.scss';
 
 const Footer = () => {
   const { isMobile } = useBreakpoints();
+  const { t } = useTranslation();
 
   return (
     <footer className="footer">
@@ -14,8 +18,8 @@ const Footer = () => {
           style={{ transform: isMobile ? 'rotate(90deg)' : '' }}
         />
         <div className="footer__connect-text">
-          <p>Connect with me </p>
-          <p style={{ fontSize: '26px' }}>Dmytro Sublin.</p>
+          <p>{t('footer.contact')}</p>
+          <p style={{ fontSize: '26px' }}>{t('footer.name')}</p>
         </div>
       </div>
       <div className="footer__contacts">
@@ -26,15 +30,15 @@ const Footer = () => {
         </a>
       </div>
       <div className="footer__copyright">
-        <p>© 2023 Dmytro Sublin engineer</p>
-        <p>Design and develop in React, Vite, Scss and GSAP</p>
+        <p>{t('footer.copyright')}</p>
+        <p>{t('footer.tools')}</p>
         <p>
-          by{' '}
+          {t('footer.by')}
           <a
             href="https://www.linkedin.com/in/vladyslav-zinchenko-67414a205/"
             target="_blank"
           >
-            Vlad Zinchenko
+            {t('footer.developer')}
           </a>
         </p>
       </div>
