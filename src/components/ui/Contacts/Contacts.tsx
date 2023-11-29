@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 import plain from '../../../assets/img/plane.svg';
+import Plane from '../../common/Plane/Plane';
 
 import './Contacts.scss';
 
@@ -37,7 +38,8 @@ const Contacts = () => {
       <h2 className="contacts__title">
         More information? <br /> Contact me.
       </h2>
-      <img src={plain} alt="plain" />
+      {/* <img src={plain} alt="plain" /> */}
+      <Plane />
     </section>
   );
 };
