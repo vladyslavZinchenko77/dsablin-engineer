@@ -1,0 +1,27 @@
+.one{
+    stroke: white;
+}
+.two{
+    stroke: white;
+}
+.three{
+    stroke: white;
+}
+.four{
+    stroke: white;
+}
+.five{
+    stroke: white;
+    animation: draw 4s ease forwards;
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 0;
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 1500;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
