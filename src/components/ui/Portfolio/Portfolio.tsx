@@ -1,9 +1,10 @@
 import gsap from 'gsap';
 import { useEffect, useRef, useState, FC } from 'react';
 import { useBreakpoints } from '../../../hooks/useBreakpoints';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -83,6 +84,7 @@ const Portfolio: FC = () => {
   const portfolioRef = useRef<HTMLElement>(null);
   const worksRef = useRef<HTMLDivElement>(null);
   const { isMobile } = useBreakpoints();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -140,7 +142,7 @@ const Portfolio: FC = () => {
         id="portfolio-title"
         justifyContent={isMobile ? 'center' : 'flex-end'}
       >
-        Portfolio
+        {t('portfolio.title')}
       </TitleSection>
 
       <Swiper

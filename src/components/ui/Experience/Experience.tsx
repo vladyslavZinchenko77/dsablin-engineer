@@ -1,46 +1,46 @@
-import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
+
+import { useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useBreakpoints } from '../../../hooks/useBreakpoints';
+
 import ButtonMain from '../../common/ButtonMain/ButtonMain';
 import teamwork from '../../../assets/img/workers.png';
 import TitleSection from '../../common/TitleSection/TitleSection';
-import { useBreakpoints } from '../../../hooks/useBreakpoints';
-import './Experience.scss';
 
-const experienceData = [
-  {
-    period: 'Jun 2016 - Present',
-    position: 'Chief Design Engineer.',
-    company: 'Archline-2000 LLC',
-    description:
-      'Development of sections of reinforced concrete structures, structural and erection, architectural networks',
-  },
-  {
-    period: 'Aug 2013 - Jul 2013',
-    position: 'Chief Design Engineer.',
-    company: '"PMTO "Agrosoyuz"',
-    description:
-      'Development of sections of reinforced concrete structures, structural and erection, architectural networks',
-  },
-  {
-    period: 'Jun 2012 - Aug 2013',
-    position: 'Lead Design Engineer.',
-    company: '"PMTO "Agrosoyuz"',
-    description:
-      'Implementation of processes for developing project documentation, technical calculations, and construction aimed at creating reinforced concrete structures (RCS), taking into account structural and installation aspects (SA)',
-  },
-  {
-    period: 'Aug 2007 - Jun 2012',
-    position: 'Design Engineer.',
-    company: 'PNPP "Fort"',
-    description:
-      'Development, calculation, and construction of reinforced concrete structures (RCS), taking into account structural and installation aspects (SA)',
-  },
-];
+import './Experience.scss';
 
 const Experience = () => {
   const experienceRef = useRef<HTMLElement>(null);
   const { isMobile } = useBreakpoints();
+  const { t } = useTranslation();
 
+  const experienceData = [
+    {
+      period: t('archiline.period'),
+      position: t('archiline.position'),
+      company: t('archiline.company'),
+      description: t('archiline.desc'),
+    },
+    {
+      period: t('agrosoyuz1.period'),
+      position: t('agrosoyuz1.position'),
+      company: t('agrosoyuz1.company'),
+      description: t('agrosoyuz1.desc'),
+    },
+    {
+      period: t('agrosoyuz2.period'),
+      position: t('agrosoyuz2.position'),
+      company: t('agrosoyuz2.company'),
+      description: t('agrosoyuz2.desc'),
+    },
+    {
+      period: t('fort.period'),
+      position: t('fort.position'),
+      company: t('fort.company'),
+      description: t('fort.desc'),
+    },
+  ];
   useEffect(() => {
     const handleScroll = () => {
       const experienceElement = experienceRef.current;
@@ -97,7 +97,7 @@ const Experience = () => {
         justifyContent={isMobile ? 'center' : 'flex-end'}
         id="experience-title"
       >
-        Work experience
+        {t('experience.title')}
       </TitleSection>
       <div className="experience__content">
         <ul className="experience__works">
@@ -122,7 +122,7 @@ const Experience = () => {
       <div
         style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}
       >
-        <ButtonMain>download cv</ButtonMain>
+        <ButtonMain>{t('download')}</ButtonMain>
       </div>
     </section>
   );

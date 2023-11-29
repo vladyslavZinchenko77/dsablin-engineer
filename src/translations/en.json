@@ -1,0 +1,58 @@
+{
+  "hero.title": "Hi, I am Dmytro Sublin",
+  "hero.subtitle": "a construction engineer",
+  "about.title": "About me",
+  "about.p1": "During my practical experience, I personally worked on, calculated, and designed the following structures and buildings:",
+  "about.p2": "Foundations: Shallow foundations, deep foundations, pile caps under individual supports, pile caps in the form of a pile field under the entire structure, retaining walls (corner, massive), sheet pile fencing, slab structures on natural foundation and on a soil cushion, strip foundations, foundations for equipment.",
+  "about.p3": "Reinforced concrete structures: Monolithic residential buildings, foundations of almost all types, coverings, floor slabs, retaining walls, working towers.",
+  "about.p4": "Metal structures: Racks, warehouses, hangars, canopies, galleries, platforms for equipment, working towers, bunkers, administrative buildings, service station buildings, car showrooms.",
+  "about.p5": "Light-gauge steel structures: Hangars, warehouses, a 4-story administrative building, an extension above a brick building.",
+  "about.p6": "Reinforcement of metal and reinforced concrete structures: Reinforced concrete beams and slab covers, steel beams, columns, trusses, opening formation in reinforced concrete and brick buildings, reinforcement of shallow foundations and strip foundations.",
+  
+  "experience.title": "Work experience",
+  "archiline.position": "Chief Design Engineer.",
+  "archiline.period": "Jun 2016 - Present",
+  "archiline.company": "Archline-2000 LLC",
+  "archiline.desc": "Development of sections of reinforced concrete structures, structural and erection, architectural networks",
+  
+  "agrosoyuz1.position": "Chief Design Engineer.",
+  "agrosoyuz1.period": "Aug 2013 - Jul 2015",
+  "agrosoyuz1.company": "PMTO Agrosoyuz",
+  "agrosoyuz1.desc": "Development of sections of reinforced concrete structures, structural and erection, architectural networks.",
+ 
+  "agrosoyuz2.position": "Lead Design Engineer.",
+  "agrosoyuz2.period": "Jun 2012 - Aug 2013",
+  "agrosoyuz2.company": "PMTO Agrosoyuz",
+  "agrosoyuz2.desc": "Implementation of processes for developing project documentation, technical calculations, and construction aimed at creating reinforced concrete structures (RCS), taking into account structural and installation aspects (SA)",
+
+
+  "fort.position": "Design Engineer",
+  "fort.period": "Aug 2007 - Jun 2012",
+  "fort.company": "PNPP Fort",
+  "fort.desc": "Development, calculation, and construction of reinforced concrete structures (RCS), taking into account structural and installation aspects (SA)",
+
+  "download" : "download cv",
+
+
+  "skills.title": "Skills",
+
+
+  "portfolio.title": "Portfolio",
+
+  "contacts.title": "More information?",
+  "contacts.subtitle": "Contact me.",
+
+  "footer.contact": "Connect with me",
+  "footer.name": "Dmytro Sublin.",
+  "footer.copyright": "© 2023 Dmytro Sublin engineer",
+  "footer.tools": "Design and develop in React, Vite, Scss and GSAP by Vlad Zinchenko",
+  "footer.by": "by ",
+  "footer.developer": "Vlad Zinchenko"
+  
+
+
+
+
+  
+
+}
