@@ -1,4 +1,11 @@
 {
+    "header.about": "Обо мне",
+    "header.skills": "Навыки",
+    "header.portfolio": "Портфолио",
+    "header.expierence": "Опыт",
+    "header.contacts": "Контакты",
+
+
     "hero.title": "Дмитрий Саблин",
     "hero.subtitle": "инженер-конструктор",
     "about.title" : "Обо мне",

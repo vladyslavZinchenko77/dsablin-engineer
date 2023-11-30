@@ -97,11 +97,21 @@ const Portfolio: FC = () => {
         const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
 
         if (isVisible) {
-          gsap.to('#portfolio-title', { x: 0, opacity: 1, duration: 1 });
-          gsap.to('.mySwiper', { opacity: 1, duration: 1, delay: 1 });
+          gsap.to('#portfolio-title', {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 1,
+          });
+          gsap.to('.mySwiper', { opacity: 1, duration: 1, delay: 2 });
         } else {
-          gsap.to('#portfolio-title', { x: '100%', opacity: 0, duration: 1 });
-          gsap.to('.mySwiper', { opacity: 0, duration: 1, delay: 1 });
+          gsap.to('#portfolio-title', {
+            x: '100%',
+            opacity: 0,
+            duration: 1,
+            delay: 1,
+          });
+          gsap.to('.mySwiper', { opacity: 0, duration: 1, delay: 2 });
         }
       }
 
@@ -110,11 +120,11 @@ const Portfolio: FC = () => {
         const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
         if (isVisible) {
           document.querySelectorAll('.card').forEach((card) => {
-            tl.to(card, { y: 0, opacity: 1, delay: 0.1 }, '+=0.1');
+            tl.to(card, { opacity: 1, delay: 0.1 }, '+=0.1');
           });
         } else {
           document.querySelectorAll('.card').forEach((card) => {
-            tl.to(card, { y: '100%', opacity: 0, delay: 0.1 }, '+=0.1');
+            tl.to(card, { opacity: 0, delay: 0.1 }, '+=0.1');
           });
         }
       }

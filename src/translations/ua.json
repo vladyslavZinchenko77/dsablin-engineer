@@ -1,4 +1,10 @@
 {
+    "header.about": "Про мене",
+    "header.skills": "Навички",
+    "header.portfolio": "Портфоліо",
+    "header.expierence": "Досвід роботи",
+    "header.contacts": "Контакти",
+
     "hero.title": "Саблін Дмитро",
     "hero.subtitle": "інженер-конструктор",
     "about.title" : "Про мене",
@@ -40,7 +46,7 @@
     "contacts.title": "Потрібно більше інформації?",
     "contacts.subtitle": "Тоді зв'яжіться зі мною.",
 
-
+    "footer.copyright": "© 2023 Дмитрий Саблин",
     "footer.contact": "Контакти для зв'язку",
     "footer.name": "Дмитро Саблін",
     "footer.tools": "Розроблено використовуючи React, Vite, Scss and GSAP",

@@ -1,4 +1,13 @@
 {
+
+  "header.about": "About me",
+  "header.skills": "Skills",
+  "header.portfolio": "Portfolio",
+  "header.expierence": "Expierence",
+  "header.contacts": "Contact me",
+
+
+
   "hero.title": "Hi, I am Dmytro Sublin",
   "hero.subtitle": "a construction engineer",
   "about.title": "About me",

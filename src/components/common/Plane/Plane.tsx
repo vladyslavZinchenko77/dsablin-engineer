@@ -1,6 +1,8 @@
+import { FC } from 'react';
+
 import './Plane.scss';
 
-const Plane = () => {
+const Plane: FC = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'center', marginTop: 24 }}>
       <svg

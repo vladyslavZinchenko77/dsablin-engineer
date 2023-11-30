@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Plane from '../../common/Plane/Plane';
@@ -10,6 +10,7 @@ import './Contacts.scss';
 const Contacts = () => {
   const contactsRef = useRef<HTMLElement>(null);
   const { t } = useTranslation();
+  const [planeAnimation, setPlaneAnimation] = useState('animation-off');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,8 +22,22 @@ const Contacts = () => {
 
         if (isVisible) {
           gsap.to('.footer', { y: 0, duration: 1, delay: 2 });
+          gsap.to('.contacts__title', {
+            y: '0',
+            opacity: 1,
+            duration: 1,
+            delay: 0.5,
+          });
+          setPlaneAnimation('animation-on');
         } else {
           gsap.to('.footer', { y: '-100%', duration: 1, delay: 2 });
+          gsap.to('.contacts__title', {
+            y: '100%',
+            opacity: 0,
+            duration: 1,
+            delay: 0.5,
+          });
+          setPlaneAnimation('animation-off');
         }
       }
     };
