@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Lang.scss';
 
-const Lang = () => {
+const Lang: FC = () => {
   const [activeLang, setActiveLang] = useState('en');
   const { i18n } = useTranslation();
 

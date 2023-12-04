@@ -58,8 +58,8 @@ import avtopriemImg5 from '../../../assets/portfolio/кап_автоприем/5
 import avtopriemImg6 from '../../../assets/portfolio/кап_автоприем/6.jpeg';
 import avtopriemImg7 from '../../../assets/portfolio/кап_автоприем/7.jpeg';
 import avtopriemImg8 from '../../../assets/portfolio/кап_автоприем/8.jpeg';
-// import avtopriemImg9 from '../../../assets/portfolio/кап_автоприем/9.jpg';
-// import avtopriemImg10 from '../../../assets/portfolio/кап_автоприем/10.jpg';
+import avtopriemImg9 from '../../../assets/portfolio/кап_автоприем/9.jpg';
+import avtopriemImg10 from '../../../assets/portfolio/кап_автоприем/10.jpg';
 
 import './Portfolio.scss';
 
@@ -103,8 +103,8 @@ const avtopriem = [
   avtopriemImg6,
   avtopriemImg7,
   avtopriemImg8,
-  // avtopriemImg9,
-  // avtopriemImg10,
+  avtopriemImg9,
+  avtopriemImg10,
 ];
 const cardData = [
   {
@@ -233,7 +233,7 @@ const Portfolio: FC = () => {
               description={card.description}
               key={index}
               isSelected={index === selectCard}
-              oncklick={() => {
+              onСlick={() => {
                 setCarouselImg(card.content);
                 setCarouselTitle(card.description);
                 setSelectCard(index);
