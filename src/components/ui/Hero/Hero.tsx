@@ -14,20 +14,22 @@ const Hero: FC = () => {
     gsap.from(introduceRef.current, {
       x: '-100%',
       duration: 2,
+      delay: 1,
       ease: 'power3.out',
     });
     gsap.to(introduceRef.current, {
       x: 0,
       duration: 2,
+      delay: 1,
       ease: 'power3.out',
     });
-    gsap.from('.hero__avatar-img--panorama', {
+    gsap.from('.hero__background-image', {
       opacity: 0,
       duration: 2,
       ease: 'power3.out',
       delay: 2,
     });
-    gsap.to('.hero__avatar-img--panorama', {
+    gsap.to('.hero__background-image', {
       opacity: 1,
       duration: 2,
       ease: 'power3.out',

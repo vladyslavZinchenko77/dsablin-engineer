@@ -216,9 +216,9 @@ const Portfolio: FC = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        {carouselImg.map((work) => {
+        {carouselImg.map((work, index) => {
           return (
-            <SwiperSlide style={{ textAlign: 'center' }}>
+            <SwiperSlide key={index} style={{ textAlign: 'center' }}>
               <img src={work} alt="img" loading="lazy" />
             </SwiperSlide>
           );
@@ -232,9 +232,9 @@ const Portfolio: FC = () => {
         {cardData.map((card, index) => {
           return (
             <Card
+              key={index}
               img={card.img}
               description={card.description}
-              key={index}
               isSelected={index === selectCard}
               onСlick={() => {
                 setCarouselImg([...card.content]);

@@ -1,16 +1,17 @@
 import gsap from 'gsap';
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useBreakpoints } from '../../../hooks/useBreakpoints';
 
 import ButtonMain from '../../common/ButtonMain/ButtonMain';
 import teamwork from '../../../assets/img/workers.png';
 import TitleSection from '../../common/TitleSection/TitleSection';
+import fileUrl from '../../../assets/Dmytro Sublin CV.pdf';
 
 import './Experience.scss';
 
-const Experience = () => {
+const Experience: FC = () => {
   const experienceRef = useRef<HTMLElement>(null);
   const { isMobile } = useBreakpoints();
   const { t } = useTranslation();
@@ -122,7 +123,7 @@ const Experience = () => {
       <div
         style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}
       >
-        <ButtonMain>{t('download')}</ButtonMain>
+        <ButtonMain fileUrl={fileUrl}>{t('download')}</ButtonMain>
       </div>
     </section>
   );

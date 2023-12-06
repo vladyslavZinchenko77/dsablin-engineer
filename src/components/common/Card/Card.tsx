@@ -5,23 +5,12 @@ interface CardProps {
   img: string;
   description: string;
   onСlick: () => void;
-  key: number;
   isSelected: boolean;
 }
 
-const Card: FC<CardProps> = ({
-  img,
-  description,
-  onСlick,
-  key,
-  isSelected,
-}) => {
+const Card: FC<CardProps> = ({ img, description, onСlick, isSelected }) => {
   return (
-    <div
-      key={key}
-      className={isSelected ? 'card__selected' : 'card'}
-      onClick={onСlick}
-    >
+    <div className={isSelected ? 'card__selected' : 'card'} onClick={onСlick}>
       <div
         className="card__img"
         style={{ backgroundImage: `url(${img})` }}
