@@ -64,63 +64,66 @@ import avtopriemImg10 from '../../../assets/portfolio/кап_автоприем/
 import './Portfolio.scss';
 
 const mainWorks = [img1, img2, img3, img4, img5];
-const bakhmutData = [
-  bakhmutImg1,
-  bakhmutImg2,
-  bakhmutImg3,
-  bakhmutImg4,
-  bakhmutImg5,
-];
-const vyrovskogoData = [
-  vyrovskogoImg1,
-  vyrovskogoImg2,
-  vyrovskogoImg3,
-  vyrovskogoImg4,
-  vyrovskogoImg5,
-  vyrovskogoImg6,
-  vyrovskogoImg7,
-];
 
-const kombikornData = [kombikornimg1, kombikornimg2, kombikornimg3];
-const riverPort = [riverportImg1, riverportImg2, riverportImg3];
-
-const silos = [
-  silosImg1,
-  silosImg2,
-  silosImg3,
-  silosImg4,
-  silosImg5,
-  silosImg6,
-  silosImg7,
-  silosImg8,
-];
-const avtopriem = [
-  avtopriemImg1,
-  avtopriemImg2,
-  avtopriemImg3,
-  avtopriemImg4,
-  avtopriemImg5,
-  avtopriemImg6,
-  avtopriemImg7,
-  avtopriemImg8,
-  avtopriemImg9,
-  avtopriemImg10,
-];
 const cardData = [
   {
     img: img1,
     description: 'вировское_рабочая башня',
-    content: vyrovskogoData,
+    content: [
+      vyrovskogoImg1,
+      vyrovskogoImg2,
+      vyrovskogoImg3,
+      vyrovskogoImg4,
+      vyrovskogoImg5,
+      vyrovskogoImg6,
+      vyrovskogoImg7,
+    ],
   },
-  { img: img2, description: 'kombikorm', content: kombikornData },
+  {
+    img: img2,
+    description: 'kombikorm',
+    content: [kombikornimg1, kombikornimg2, kombikornimg3],
+  },
   {
     img: img3,
     description: 'ЦНАП у м.Бахмут, Донецької обл',
-    content: bakhmutData,
+    content: [bakhmutImg1, bakhmutImg2, bakhmutImg3, bakhmutImg4, bakhmutImg5],
   },
-  { img: img4, description: 'Річковий порт', content: riverPort },
-  { img: img5, description: 'Силос', content: silos },
-  { img: img6, description: 'автоприем', content: avtopriem },
+  {
+    img: img4,
+    description: 'Річковий порт',
+    content: [riverportImg1, riverportImg2, riverportImg3],
+  },
+  {
+    img: img5,
+    description: 'Силос',
+    content: [
+      silosImg1,
+      silosImg2,
+      silosImg3,
+      silosImg4,
+      silosImg5,
+      silosImg6,
+      silosImg7,
+      silosImg8,
+    ],
+  },
+  {
+    img: img6,
+    description: 'автоприем',
+    content: [
+      avtopriemImg1,
+      avtopriemImg2,
+      avtopriemImg3,
+      avtopriemImg4,
+      avtopriemImg5,
+      avtopriemImg6,
+      avtopriemImg7,
+      avtopriemImg8,
+      avtopriemImg9,
+      avtopriemImg10,
+    ],
+  },
 ];
 
 const Portfolio: FC = () => {
@@ -216,7 +219,7 @@ const Portfolio: FC = () => {
         {carouselImg.map((work) => {
           return (
             <SwiperSlide style={{ textAlign: 'center' }}>
-              <img src={work} alt="img" />
+              <img src={work} alt="img" loading="lazy" />
             </SwiperSlide>
           );
         })}
@@ -234,7 +237,7 @@ const Portfolio: FC = () => {
               key={index}
               isSelected={index === selectCard}
               onСlick={() => {
-                setCarouselImg(card.content);
+                setCarouselImg([...card.content]);
                 setCarouselTitle(card.description);
                 setSelectCard(index);
               }}
