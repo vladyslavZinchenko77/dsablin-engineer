@@ -14,11 +14,13 @@ const Hero: FC = () => {
     gsap.from(introduceRef.current, {
       x: '-100%',
       duration: 2,
+      delay: 1,
       ease: 'power3.out',
     });
     gsap.to(introduceRef.current, {
       x: 0,
       duration: 2,
+      delay: 1,
       ease: 'power3.out',
     });
     gsap.from('.hero__background-image', {
