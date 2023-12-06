@@ -21,8 +21,20 @@ const Contacts = () => {
 
         if (isVisible) {
           gsap.to('.footer', { y: 0, duration: 1, delay: 2 });
+          gsap.to('.contacts__title', {
+            y: '0',
+            opacity: 1,
+            duration: 1,
+            delay: 0.5,
+          });
         } else {
           gsap.to('.footer', { y: '-100%', duration: 1, delay: 2 });
+          gsap.to('.contacts__title', {
+            y: '100%',
+            opacity: 0,
+            duration: 1,
+            delay: 0.5,
+          });
         }
       }
     };

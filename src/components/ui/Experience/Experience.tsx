@@ -116,7 +116,7 @@ const Experience = () => {
           className="experience__content-img"
           style={{ display: 'flex', justifyContent: 'center' }}
         >
-          <img src={teamwork} alt="teamwork" />
+          <img src={teamwork} alt="teamwork" loading="lazy" />
         </div>
       </div>
       <div

@@ -4,7 +4,7 @@ import './Card.scss';
 interface CardProps {
   img: string;
   description: string;
-  oncklick: () => void;
+  onСlick: () => void;
   key: number;
   isSelected: boolean;
 }
@@ -12,7 +12,7 @@ interface CardProps {
 const Card: FC<CardProps> = ({
   img,
   description,
-  oncklick,
+  onСlick,
   key,
   isSelected,
 }) => {
@@ -20,7 +20,7 @@ const Card: FC<CardProps> = ({
     <div
       key={key}
       className={isSelected ? 'card__selected' : 'card'}
-      onClick={oncklick}
+      onClick={onСlick}
     >
       <div
         className="card__img"

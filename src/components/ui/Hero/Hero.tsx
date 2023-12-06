@@ -78,9 +78,10 @@ const Hero: FC = () => {
         <ScrollDown />
       </div>
       <img
-        className="hero__avatar-img--panorama"
+        className="hero__background-image"
         src={panorama}
         alt="panorama"
+        loading="lazy"
       />
     </section>
   );

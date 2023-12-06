@@ -2,8 +2,9 @@ import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 import { useBreakpoints } from '../../../hooks/useBreakpoints';
 import { useTranslation } from 'react-i18next';
-import avatar from '../../../assets/img/avatar.jpg';
+
 import TitleSection from '../../common/TitleSection/TitleSection';
+import avatar from '../../../assets/img/avatar.jpg';
 
 import './About.scss';
 

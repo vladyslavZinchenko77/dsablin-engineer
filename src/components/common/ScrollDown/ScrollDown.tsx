@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import './ScrollDown.scss';
 
-const ScrollDown = () => {
+const ScrollDown: FC = () => {
   return (
     <div className="scroll-icon">
       <div className="arrow one">
