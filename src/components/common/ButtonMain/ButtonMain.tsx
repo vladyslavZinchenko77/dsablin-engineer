@@ -1,34 +1,3 @@
-// import { FC } from 'react';
-// import './ButtonMain.scss';
-
-// interface ButtonMainProps {
-//   children: string;
-//   style?: React.CSSProperties;
-//   href?: string;
-//   onСlick?: () => void;
-// }
-
-// const ButtonMain: FC<ButtonMainProps> = ({
-//   children,
-//   style,
-//   href,
-//   onСlick,
-// }) => {
-//   return (
-//     <a
-//       href={href}
-//       download
-//       onClick={onСlick}
-//       style={style}
-//       className="button-main"
-//     >
-//       {children}
-//     </a>
-//   );
-// };
-
-// export default ButtonMain;
-
 import { FC } from 'react';
 import './ButtonMain.scss';
 
@@ -52,8 +21,8 @@ const ButtonMain: FC<ButtonMainProps> = ({
 
       // Устанавливаем атрибуты
       downloadLink.href = fileUrl; // Путь к файлу
-      downloadLink.download = 'yourFileName.ext'; // Имя файла, которое будет предложено при сохранении
 
+      downloadLink.target = '_blank';
       // Добавляем ссылку в DOM
       document.body.appendChild(downloadLink);
 
@@ -74,7 +43,7 @@ const ButtonMain: FC<ButtonMainProps> = ({
     <a
       href={fileUrl} // Используем fileUrl в href
       download
-      onClick={handleDownload} // Заменяем onСlick на handleDownload
+      onClick={handleDownload}
       style={style}
       className="button-main"
     >
