@@ -14,6 +14,36 @@
             font-size: 36px;
         }
     }
+    .contacts__form-wrap{
+        display: flex;
+        justify-content: center;
+        margin-top: 24px;
+        
+        .contacts__form{
+            display: flex;
+            flex-direction: column;
+            min-width: 250px;
+            max-width: 600px;
+        
+            .contacts__input{
+                padding: 12px;
+                margin-top: 8px;
+                width: 100%;;
+                
+            }
+            .contacts__form-btn--wrap{
+                display: flex;
+                justify-content: center;
+                margin-top: 12px;
+                .contacts__form-btn{
+                    width: 30%;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+   
 }
 
 
