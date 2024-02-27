@@ -53,6 +53,52 @@ const Contacts = () => {
       <h2 className="contacts__title">
         {t('contacts.title')} <br /> {t('contacts.subtitle')}
       </h2>
+
+      <div className="contacts__form-wrap">
+        <form className="contacts__form">
+          <input
+            className="contacts__input"
+            required
+            name="name"
+            placeholder="Your name"
+            type="text"
+          />
+          <input
+            className="contacts__input"
+            required
+            name="lastName"
+            placeholder="Your last name"
+            type="text"
+          />
+
+          <input
+            className="contacts__input"
+            required
+            name="email"
+            placeholder="example@gmail.com"
+            type="text"
+          />
+          <input
+            className="contacts__input"
+            required
+            name="phoneNumber"
+            placeholder="+38 099 9999 999"
+            type="text"
+          />
+          <textarea
+            style={{ maxWidth: '100%', minWidth: '100%', maxHeight: 200 }}
+            className="contacts__input"
+            required
+            placeholder="Text your message"
+            name="message"
+          />
+          <div className="contacts__form-btn--wrap">
+            <button className="contacts__form-btn" type="submit">
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
       <Plane />
     </section>
   );
