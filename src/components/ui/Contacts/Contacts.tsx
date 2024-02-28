@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import ButtonMainLink from '../../common/ButtonMainLink/ButtonMainLink';
+import Button from '../../common/Button/Button';
 import Plane from '../../common/Plane/Plane';
 
 import './Contacts.scss';
@@ -94,7 +94,9 @@ const Contacts = () => {
             name="message"
           />
           <div className="contacts__form-btn--wrap">
-            <ButtonMainLink isBlack={true}>Send</ButtonMainLink>
+            <Button type="submit" isBlack={true}>
+              Send
+            </Button>
           </div>
         </form>
       </div>

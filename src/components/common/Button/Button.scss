@@ -1,0 +1,97 @@
+
+@import "../../../styles/viriables.scss";
+
+
+
+.button {
+    padding: 10px 20px;
+    background: none; 
+    border: 2px solid $main-color;
+    text-decoration: none;
+    color: $main-color;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1); 
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .button:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: $main-color;
+    z-index: -1;
+    transition: width 0.3s ease;
+  }
+  
+  .button:hover {
+    color: $black-color;
+  }
+  
+  .button:hover:after {
+    width: 100%;
+  }
+  
+  .button:active {
+    transform: scale(0.95);
+  }
+
+  
+
+  
+.button-black {
+  padding: 10px 20px;
+  background: none; 
+  border: 2px solid $black-color; 
+  text-decoration: none;
+  color: $black-color; 
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1); 
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; 
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.button-black:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: $black-color; 
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+
+.button-black:hover {
+  color: $main-color; 
+}
+
+.button-black:hover:after {
+  width: 100%;
+}
+
+.button-black:active {
+  transform: scale(0.95);
+}
