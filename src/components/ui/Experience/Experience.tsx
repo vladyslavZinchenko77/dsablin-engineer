@@ -123,7 +123,9 @@ const Experience: FC = () => {
       <div
         style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}
       >
-        <ButtonMain fileUrl={fileUrl}>{t('download')}</ButtonMain>
+        <ButtonMain isBlack={false} fileUrl={fileUrl}>
+          {t('download')}
+        </ButtonMain>
       </div>
     </section>
   );

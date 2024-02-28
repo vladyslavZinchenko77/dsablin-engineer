@@ -6,6 +6,7 @@ interface ButtonMainProps {
   style?: React.CSSProperties;
   fileUrl?: string; // Добавленное свойство для передачи ссылки на файл
   onClick?: () => void;
+  isBlack: boolean;
 }
 
 const ButtonMain: FC<ButtonMainProps> = ({
@@ -13,6 +14,7 @@ const ButtonMain: FC<ButtonMainProps> = ({
   style,
   fileUrl, // Передаваемая ссылка на файл
   onClick,
+  isBlack,
 }) => {
   const handleDownload = () => {
     if (fileUrl) {
@@ -45,7 +47,7 @@ const ButtonMain: FC<ButtonMainProps> = ({
       download
       onClick={handleDownload}
       style={style}
-      className="button-main"
+      className={isBlack ? 'button-main-black' : 'button-main'}
     >
       {children}
     </a>
