@@ -4,7 +4,7 @@ import { useRef, useEffect, FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useBreakpoints } from '../../../hooks/useBreakpoints';
 
-import ButtonMain from '../../common/ButtonMain/ButtonMain';
+import ButtonMainLink from '../../common/ButtonMainLink/ButtonMainLink';
 import teamwork from '../../../assets/img/workers.png';
 import TitleSection from '../../common/TitleSection/TitleSection';
 import fileUrl from '../../../assets/Dmytro Sublin CV.pdf';
@@ -123,9 +123,9 @@ const Experience: FC = () => {
       <div
         style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}
       >
-        <ButtonMain isBlack={false} fileUrl={fileUrl}>
+        <ButtonMainLink isBlack={false} fileUrl={fileUrl}>
           {t('download')}
-        </ButtonMain>
+        </ButtonMainLink>
       </div>
     </section>
   );

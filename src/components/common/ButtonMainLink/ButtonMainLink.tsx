@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import './ButtonMain.scss';
+import './ButtonMainLink.scss';
 
-interface ButtonMainProps {
+interface ButtonMainLinkProps {
   children: string;
   style?: React.CSSProperties;
   fileUrl?: string; // Добавленное свойство для передачи ссылки на файл
@@ -9,7 +9,7 @@ interface ButtonMainProps {
   isBlack: boolean;
 }
 
-const ButtonMain: FC<ButtonMainProps> = ({
+const ButtonMainLink: FC<ButtonMainLinkProps> = ({
   children,
   style,
   fileUrl, // Передаваемая ссылка на файл
@@ -54,4 +54,4 @@ const ButtonMain: FC<ButtonMainProps> = ({
   );
 };
 
-export default ButtonMain;
+export default ButtonMainLink;
