@@ -1,10 +1,9 @@
 import gsap from 'gsap';
-
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-
-import ButtonMainLink from '../../common/ButtonMainLink/ButtonMainLink';
+import Button from '../../common/Button/Button';
 import Plane from '../../common/Plane/Plane';
+import axios from 'axios'; // Импорт axios для отправки запросов
 
 import './Contacts.scss';
 
@@ -41,13 +40,30 @@ const Contacts = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-
     handleScroll();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); // Предотвращаем стандартное поведение отправки формы
+
+    const formData = new FormData(event.currentTarget); // Получаем данные формы
+
+    try {
+      // Отправляем данные на сервер Node.js
+      const response = await axios.post(
+        'http://localhost:3001/sendMessage',
+        formData
+      );
+
+      console.log('Server response:', response.data);
+    } catch (error) {
+      console.error('Error sending form data:', error);
+    }
+  };
 
   return (
     <section ref={contactsRef} className="contacts" id="contact">
@@ -56,7 +72,10 @@ const Contacts = () => {
       </h2>
 
       <div className="contacts__form-wrap">
-        <form className="contacts__form">
+        <form
+          className="contacts__form"
+          onSubmit={handleSubmit} // Вызываем функцию handleSubmit при отправке формы
+        >
           <input
             className="contacts__input"
             required
@@ -94,7 +113,9 @@ const Contacts = () => {
             name="message"
           />
           <div className="contacts__form-btn--wrap">
-            <ButtonMainLink isBlack={true}>Send</ButtonMainLink>
+            <Button type="submit" isBlack={true}>
+              Send
+            </Button>
           </div>
         </form>
       </div>
