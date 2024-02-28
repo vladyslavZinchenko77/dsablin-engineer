@@ -7,13 +7,24 @@ import bodyParser from 'body-parser';
 import axios from 'axios';
 
 const app = express();
-const port = 3001; // Порт, на котором будет работать ваш сервер
+const port = 3001;
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // Добавляем методы, которые разрешены
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Добавляем разрешенные заголовки, включая Content-Type
+  next();
+});
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.post('/sendMessage', (req, res) => {
   const { name, lastName, email, phoneNumber, message } = req.body;
+
+  // Проверка наличия всех обязательных полей
+  if (!name || !lastName || !email || !message) {
+    return res.status(400).json({ success: false, error: 'Отсутствуют обязательные поля' });
+  }
 
   // Создание сообщения для отправки в Telegram
   const messageToTelegram = `
