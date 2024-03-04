@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import Button from '../../common/Button/Button';
+// import Button from '../../common/Button/Button';
 import Plane from '../../common/Plane/Plane';
 import gsap from 'gsap';
 
@@ -46,32 +46,32 @@ const Contacts = () => {
     };
   }, []);
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  // const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
+  // const formData = new FormData(event.currentTarget);
 
-    try {
-      const response = await fetch('http://localhost:3000/sendMessage', {
-        method: 'POST',
-        body: JSON.stringify(Object.fromEntries(formData)),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+  //   try {
+  //     const response = await fetch('http://localhost:3000/sendMessage', {
+  //       method: 'POST',
+  //       body: JSON.stringify(Object.fromEntries(formData)),
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //     });
 
-      if (response.ok) {
-        console.log('Message sent successfully!');
-        alert('Message sent successfully!');
-      } else {
-        console.error('Failed to send message:', response.statusText);
-        alert('Failed to send message');
-      }
-    } catch (error) {
-      console.error('Error sending form data:', error);
-      alert('Error sending message');
-    }
-  };
+  //     if (response.ok) {
+  //       console.log('Message sent successfully!');
+  //       alert('Message sent successfully!');
+  //     } else {
+  //       console.error('Failed to send message:', response.statusText);
+  //       alert('Failed to send message');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error sending form data:', error);
+  //     alert('Error sending message');
+  //   }
+  // };
 
   return (
     <section ref={contactsRef} className="contacts" id="contact">
@@ -79,7 +79,7 @@ const Contacts = () => {
         {t('contacts.title')} <br /> {t('contacts.subtitle')}
       </h2>
 
-      <div className="contacts__form-wrap">
+      {/* <div className="contacts__form-wrap">
         <form className="contacts__form" onSubmit={handleSubmit}>
           <label htmlFor="name">
             Name*
@@ -137,7 +137,7 @@ const Contacts = () => {
             </Button>
           </div>
         </form>
-      </div>
+      </div> */}
       <Plane />
     </section>
   );
