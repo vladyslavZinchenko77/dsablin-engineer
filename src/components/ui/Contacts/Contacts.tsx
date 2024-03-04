@@ -47,17 +47,16 @@ const Contacts = () => {
   }, []);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); // Предотвращаем стандартное поведение отправки формы
+    event.preventDefault();
 
-    const formData = new FormData(event.currentTarget); // Получаем данные формы
+    const formData = new FormData(event.currentTarget);
 
     try {
-      // Отправляем данные на сервер Node.js
       const response = await fetch('http://localhost:3000/sendMessage', {
         method: 'POST',
-        body: JSON.stringify(Object.fromEntries(formData)), // Преобразуем FormData в объект и преобразуем его в JSON
+        body: JSON.stringify(Object.fromEntries(formData)),
         headers: {
-          'Content-Type': 'application/json', // Указываем тип контента
+          'Content-Type': 'application/json',
         },
       });
 
@@ -81,10 +80,7 @@ const Contacts = () => {
       </h2>
 
       <div className="contacts__form-wrap">
-        <form
-          className="contacts__form"
-          onSubmit={handleSubmit} // Вызываем функцию handleSubmit при отправке формы
-        >
+        <form className="contacts__form" onSubmit={handleSubmit}>
           <label htmlFor="name">
             Name*
             <input
