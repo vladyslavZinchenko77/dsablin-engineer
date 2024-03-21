@@ -33,7 +33,6 @@ const Footer = () => {
         <p>{t('footer.copyright')}</p>
         <p>{t('footer.tools')}</p>
         <p>
-          {t('footer.by')}
           <a
             href="https://www.linkedin.com/in/vladyslav-zinchenko-67414a205/"
             target="_blank"
