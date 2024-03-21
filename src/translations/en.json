@@ -54,7 +54,7 @@
   "footer.contact": "Connect with me",
   "footer.name": "Dmytro Sublin.",
   "footer.copyright": "© 2023 Dmytro Sublin engineer",
-  "footer.tools": "Design and develop in React, Vite, Scss and GSAP by Vlad Zinchenko",
+  "footer.tools": "Design and develop in React, Vite, Scss and GSAP by",
   "footer.by": "by ",
   "footer.developer": "Vlad Zinchenko"
   
@@ -62,6 +62,5 @@
 
 
 
-  
 
 }
